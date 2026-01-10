@@ -19,21 +19,24 @@ interface ExperienceProps {
 interface ProjectsTileProps {
   title: string;
   subtitle: string;
-  img1: string;
-  img2: string;
-  githubUrl: string;
-  url:string;
+  img1?: string;
+  img2?: string;
+  githubUrl?: string;
+  url?: string;
   stack: string[];
-  logo: string;
+  logo?: string;
+  isCertified?: boolean;
 }
 
 export default function MobileHome() {
   const [experience, setExperience] = useState<ExperienceProps[]>([]);
   const [projects, setProjects] = useState<ProjectsTileProps[]>([]);
+  const [achievements, setAchievements] = useState<ProjectsTileProps[]>([]);
 
   useEffect(() => {
     fetch('/experience.json').then(res => res.json()).then(setExperience);
     fetch('/projects.json').then(res => res.json()).then(setProjects);
+    fetch('/achievements.json').then(res => res.json()).then(setAchievements);
   }, []);
 
   return (
@@ -92,6 +95,24 @@ export default function MobileHome() {
                 <CarouselItem key={idx} className="p-2">
                   <div className="rounded-lg px-6">
                     <ProjectsTile {...proj} />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center w-full">
+        <div className="text-lg font-semibold text-zinc-200">Achievements</div>
+        <div className="text-xs text-zinc-600 mb-1">swipe left</div>
+        <div className="w-full">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {achievements.map((ach, idx) => (
+                <CarouselItem key={idx} className="p-2">
+                  <div className="rounded-lg px-6">
+                    <ProjectsTile {...ach} />
                   </div>
                 </CarouselItem>
               ))}
