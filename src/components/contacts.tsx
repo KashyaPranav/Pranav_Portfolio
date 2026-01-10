@@ -16,9 +16,9 @@ interface Contact {
 }
 
 const contacts: Contact[] = [
-  { label: 'Email', icon: <FaEnvelope />, link: 'mailto:ritwiksharma.tech@gmail.com' },
-  { label: 'GitHub', icon: <FaGithub />, link: 'https://github.com/Ritwikgotbugs' },
-  { label: 'LinkedIn', icon: <FaLinkedin />, link: 'https://linkedin.com/in/sharmaritwik' },
+  { label: 'Email', icon: <FaEnvelope />, link: 'mailto:pranavkumarkashyap@gmail.com' },
+  { label: 'GitHub', icon: <FaGithub />, link: 'https://github.com/KashyaPranav' },
+  { label: 'LinkedIn', icon: <FaLinkedin />, link: 'https://linkedin.com/in/pranavkkashyap' },
 ];
 
 export const CollapsibleContacts = () => {

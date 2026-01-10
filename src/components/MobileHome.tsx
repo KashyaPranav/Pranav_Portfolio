@@ -40,10 +40,10 @@ export default function MobileHome() {
     <div className="block md:hidden w-full min-h-screen bg-black text-white px-2 pb-8 flex flex-col justify-center items-center">
       <div className="flex flex-col items-center pt-6 pb-4">
         <Image src="/assets/avatar.png" alt="avatar" width={96} height={96} className="w-24 h-24 rounded-full object-cover mb-2" />
-        <div className="text-xl font-bold text-zinc-200">Ritwik Sharma</div>
+        <div className="text-xl font-bold text-zinc-200">Pranav Kumar Kashyap</div>
         <div className="text-sm text-zinc-400 mb-2 italic">Software Engineer</div>
         <a
-          href="https://drive.google.com/file/d/1co0cdhSECMKSlPkkgvMAK9FlIbpQhsVK/view?usp=sharing"
+          href="https://drive.google.com/file/d/1y5Jkm59Vb_Sq54yTkm3xDh5yElaJmwOq/view?usp=drivesdk"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-zinc-900 text-white px-6 py-2 rounded-md text-xs font-semibold hover:bg-zinc-700 transition"
@@ -55,12 +55,12 @@ export default function MobileHome() {
       <div className="mb-4 rounded-lg">
         <div className="text-lg font-bold text-zinc-300 mb-1">about</div>
         <div className="text-zinc-400 text-xs mb-4">
-          making things work — a software engineer.
+          Building what works — a software engineer.
         </div>
         <div className="flex flex-col gap-1 mt-2">
-          <a href="mailto:ritwiksharma.tech@gmail.com" className="flex items-center gap-2 text-blue-400 text-xs"><IoIosAt /> ritwiksharma.tech@gmail.com</a>
-          <a href="https://github.com/ritwikgotbugs" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-400 text-xs"><FaGithub /> github.com/ritwikgotbugs</a>
-          <a href="https://linkedin.com/in/sharmaritwik" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-400 text-xs"><FaLinkedin /> linkedin.com/in/sharmaritwik</a>
+          <a href="mailto:pranavkumarkashyap@gmail.com" className="flex items-center gap-2 text-blue-400 text-xs"><IoIosAt /> pranavkumarkashyap@gmail.com</a>
+          <a href="https://github.com/KashyaPranav" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-400 text-xs"><FaGithub /> github.com/KashyaPranav</a>
+          <a href="https://linkedin.com/in/pranavkkashyap" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-400 text-xs"><FaLinkedin /> linkedin.com/in/pranavkkashyap</a>
         </div>
       </div>
 
@@ -103,15 +103,15 @@ export default function MobileHome() {
       <hr className="w-full mx-4 mb-4 mt-6 border-1 border-zinc-800" />
       <div className="flex flex-row items-center gap-2 mb-2">
         <div className="flex gap-2 text-xl">
-          <a href="https://github.com/ritwikgotbugs" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+          <a href="https://github.com/KashyaPranav" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/sharmaritwik" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+          <a href="https://linkedin.com/in/pranavkkashyap" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
             <FaLinkedin />
           </a>
         </div>
         <a
-          href="https://drive.google.com/file/d/1co0cdhSECMKSlPkkgvMAK9FlIbpQhsVK/view?usp=sharing"
+          href="https://drive.google.com/file/d/1y5Jkm59Vb_Sq54yTkm3xDh5yElaJmwOq/view?usp=drivesdk"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white px-4 py-2 rounded-md text-xs font-semibold transition border border-zinc-700"
