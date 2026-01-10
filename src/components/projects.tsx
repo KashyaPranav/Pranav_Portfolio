@@ -8,15 +8,16 @@ import { IoGlobeOutline } from "react-icons/io5";
 interface ProjectsTileProps {
   title: string;
   subtitle: string;
-  img1: string;
+  img1?: string;
   img2?: string;
-  githubUrl: string;
-  url: string;
+  githubUrl?: string;
+  url?: string;
   stack: string[];
-  logo: string;
+  logo?: string;
   isApp?: boolean;
   isLive?: boolean;
   isCodeLive?: boolean;
+  isCertified?: boolean;
 }
 
 export const ProjectsTile = ({
@@ -27,6 +28,7 @@ export const ProjectsTile = ({
   stack,
   isLive = true,
   isCodeLive = true,
+  isCertified = false,
 }: ProjectsTileProps) => {
   // const [previewImg, setPreviewImg] = useState<string | null>(null);
   const [expanded, setExpanded] = useState(false);
@@ -66,17 +68,19 @@ export const ProjectsTile = ({
           </div>
 
           <div className="flex gap-3 justify-end mt-auto pt-4">
+            {!isCertified && (
+              <div
+                className={`w-full py-2 flex items-center justify-center text-black text-xs md:text-sm rounded-md ${
+                  isCodeLive ? 'bg-zinc-300 cursor-pointer hover:bg-white' : 'bg-zinc-800  cursor-not-allowed hidden'
+                } transition`}
+                onClick={() => isCodeLive && window.open(githubUrl, '_blank')}>
+                <FaGithub className={`text-black mr-2 text-lg  ${!isCodeLive && 'opacity-30'}`} />code
+              </div>
+            )}
             <div
-              className={`w-full py-2 flex items-center justify-center text-black text-xs md:text-sm rounded-md ${
-                isCodeLive ? 'bg-zinc-300 cursor-pointer hover:bg-white' : 'bg-zinc-800  cursor-not-allowed hidden'
-              } transition`}
-              onClick={() => isCodeLive && window.open(githubUrl, '_blank')}>
-              <FaGithub className={`text-black mr-2 text-lg  ${!isCodeLive && 'opacity-30'}`} />code
-            </div>
-            <div
-              className={` ${isLive ? '' : 'hidden'} w-full flex py-2 items-center text-xs md:text-sm justify-center text-black rounded-md bg-zinc-300 hover:bg-white cursor-pointer transition`}
+              className={` ${isLive || isCertified ? '' : 'hidden'} w-full flex py-2 items-center text-xs md:text-sm justify-center text-black rounded-md bg-zinc-300 hover:bg-white cursor-pointer transition`}
               onClick={() => window.open(url, '_blank')}>
-              <IoGlobeOutline className="text-black mr-2 text-lg" /> project
+              <IoGlobeOutline className="text-black mr-2 text-lg" /> {isCertified ? 'certificate' : 'project'}
             </div>
           </div>
 

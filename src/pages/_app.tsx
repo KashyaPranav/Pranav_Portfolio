@@ -28,18 +28,18 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
       <Head>
-        <title>Ritwik - Software Engineer</title>
-        <meta name="description" content="Portfolio of Ritwik Sharma" />
-        <meta name="keywords" content="Portfolio, Web Development, Developer, Ritwikgotbugs, Ritwik Sharma, Full Stack Developer, Next.js, React, JavaScript, TypeScript" />
-        <meta name="author" content="Ritwik Sharma" />
-        <meta property="og:title" content="Ritwik Sharma" />
-        <meta property="og:description" content="Portfolio of Ritwik Sharma" />
+        <title>Pranav Kumar Kashyap - Software Engineer</title>
+        <meta name="description" content="Portfolio of Pranav Kumar Kashyap" />
+        <meta name="keywords" content="Portfolio, Web Development, Developer, Pranav Kumar Kashyap, Full Stack Developer, Next.js, React, JavaScript, TypeScript" />
+        <meta name="author" content="Pranav Kumar Kashyap" />
+        <meta property="og:title" content="Pranav Kumar Kashyap" />
+        <meta property="og:description" content="Portfolio of Pranav Kumar Kashyap" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ritwikgotbugs.vercel.app" />
-        <meta name="twitter:title" content="Ritwik Sharma" />
-        <meta name="twitter:description" content="Portfolio of Ritwik Sharma" />
+        <meta property="og:url" content="https://pranavkumarkashyap.vercel.app" />
+        <meta name="twitter:title" content="Pranav Kumar Kashyap" />
+        <meta name="twitter:description" content="Portfolio of Pranav Kumar Kashyap" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@ritwikgotbugs" />
+        <meta name="twitter:creator" content="@pranavkumarkashyap" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="assets/avatar.png" />
       </Head>

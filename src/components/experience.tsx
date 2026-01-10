@@ -11,29 +11,38 @@ interface ExperienceProps {
 }
 
 const highlightKeywords = [
-  'AWS EC2 with Docker',
-  'multiple cross-platform applications',
-  'optimized a production-grade web application',
-  "improving lead management efficiency",
-  "enhancing domain routing, SSL handling",
-  'integrated deeplinks',
-  'reduced overhead',
-  'built multiple WhatsApp bots',
-  'reduced server calls and overhead',
-  'Nginx',
-  'DNS',
-  'AWS EC2',
-  'Docker',
-  'reducing manual overhead and latency',
-  'SSH hardening, UFW firewall configuration, and automated updates',
-  'Flutter-based IoT app for air purifiers',
-  'Integrated graphs and dashboard analysis',
-  'overseeing up to 3 development projects',
-  'Conducted sessions, provided guidance, resolved technical inquiries',
-  'cross-platform IoT application',
-  'data visualization dashboards',
-  'conducting weekly code reviews to ensure clean, modular and maintainable code.',
-  'Present'
+  'Jio Associate Verification System',
+  'Node.js',
+  'Express.js',
+  'MongoDB',
+  'OTP-based authentication',
+  'JWT authorization',
+  'AES-256 encryption',
+  'GDPR',
+  'Flutter',
+  'modular architecture',
+  '25%',
+  'CI/CD',
+  'OCR-driven document verification pipeline',
+  'PyTorch-based document classification',
+  'CNN and LayoutLM',
+  'Multi-modal Biometric Security System',
+  '98% blink detection',
+  '97% speaker verification',
+  'Agentic AI-powered interview evaluation',
+  'Scalable distributed architectures',
+  'System Design and Microservices',
+  'Oracle Cloud Infrastructure Foundations Associate',
+  'Computer vision and rule-based validation',
+  'Logo detection and template matching',
+  'Real-time automated speech-to-text processing',
+  'Performance Optimization',
+  'Docker and Kubernetes',
+  '1st Prize Hackverse Hackathon 9.0',
+  'SRM Hackathon 9.0 Winner',
+  'Innovation Award for impactful innovation',
+  'Production-grade application deployment',
+  'Full-stack and machine learning systems at scale'
 ];
 
 export const Experience = ({
@@ -51,7 +60,7 @@ export const Experience = ({
       const regex = new RegExp(`(${keyword})`, 'gi');
       modifiedText = modifiedText.replace(
         regex,
-        '<span class=" text-white">$1</span>'
+        '<span class="font-bold text-white">$1</span>'
       );
     });
     return modifiedText;

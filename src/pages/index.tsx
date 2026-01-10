@@ -15,6 +15,7 @@ export default function AboutPage() {
   const aboutSections = [
     { type: 'title' },
     { type: 'subtitle' },
+    { type: 'highlights' },
     { type: 'skills' },
     { type: 'contacts' }
   ];
@@ -43,14 +44,22 @@ export default function AboutPage() {
   }, [handleEnter, handleBackSpace]);
 
   const skills = {
-    languages: ['C/C++', 'Python', 'JavaScript', 'TypeScript'],
+    languages: [
+      'C++', 'Python', 'JavaScript', 'C', 'SQL'  
+    ],
     frameworks: [
-      'ReactJs', 'NodeJs', 'Flask', 'NextJs', 'TailwindCSS', 'Flutter', 'React Native', 'ExpressJS'
+      'Node.js', 'Express.js','REST APIs', 'React.js', 'PyTorch', 'OpenCV', 'Streamlit' 
     ],
     devops: [
-      'AWS', 'Docker', 'Firebase/Supabase', 'MongoDB', 'MySQL'
+      'AWS', 'Oracle Cloud', 'Docker', 'Kubernetes', 'CI/CD', 'Git' 
+    ],
+    databases: [
+      'MongoDB', 'MySQL', 'PostgreSQL' 
+    ],
+    core : [
+      'Data Structures & Algorithms', 'OOP', 'System Design', 'Microservices','Agile Methodologies','OOP'
     ]
-  };
+};
 
   return (
     <>
@@ -68,14 +77,25 @@ export default function AboutPage() {
 
           <div
             style={aboutAnimations[1].style}
-            className={`text-zinc-500 text-lg ${aboutAnimations[1].className}`}
+            className={`text-blue-400 text-lg ${aboutAnimations[1].className}`}
           >
-            making things work — a software engineer.
+            Building what works — a software engineer.
           </div>
 
           <div
             style={aboutAnimations[2].style}
-            className={`text-zinc-400 text-base ${aboutAnimations[2].className}`}
+            className={`text-zinc-500 text-sm space-y-2 font-normal ${aboutAnimations[2].className}`}
+          >
+            <ul className="list-disc list-inside space-y-1.5">
+              <li><span className="font-bold text-white">8th-semester CSE student at SRM IST, Chennai</span>  <span className="font-bold text-white">with a 9.24/10 CGPA</span></li>
+              <li> <span className="font-bold text-white">Former SDE Intern at Reliance Jio Platforms Limited, RCP</span></li>
+              <li><span className="font-bold text-white">Winner of 4 national-level hackathons</span> </li>
+            </ul>
+          </div>
+
+          <div
+            style={aboutAnimations[3].style}
+            className={`text-zinc-400 text-base ${aboutAnimations[3].className}`}
           >
             <div className="mb-1 flex items-center gap-1 flex-wrap">
               <span className="font-semibold text-zinc-300 mr-2">Languages:</span>
@@ -93,9 +113,17 @@ export default function AboutPage() {
                 </Badge>
               ))}
             </div>
-            <div className="flex items-center gap-1 flex-wrap">
+            <div className="mb-1 flex items-center gap-1 flex-wrap">
               <span className="font-semibold text-zinc-300 mr-2">DevOps and Databases:</span>
               {skills.devops.map(skill => (
+                <Badge key={skill} variant='default' className='bg-zinc-800 text-zinc-300'>
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+            <div className="flex items-center gap-1 flex-wrap">
+              <span className="font-semibold text-zinc-300 mr-2">Core:</span>
+              {skills.core.map(skill => (
                 <Badge key={skill} variant='default' className='bg-zinc-800 text-zinc-300'>
                   {skill}
                 </Badge>
@@ -104,47 +132,47 @@ export default function AboutPage() {
           </div>
 
           <div
-            style={aboutAnimations[3].style}
-            className={`space-y-2 text-zinc-400 text-sm ${aboutAnimations[3].className}`}
+            style={aboutAnimations[4].style}
+            className={`space-y-2 text-zinc-400 text-sm ${aboutAnimations[4].className}`}
           >
             <p>
               <IoIosAt className="inline mr-3 text-zinc-400 text-xl" />
               <a
-                href="mailto:ritwiksharma.tech@gmail.com"
+                href="mailto:pranavkumarkashyap@gmail.com"
                 className="text-blue-400 hover:underline"
               >
-                ritwiksharma.tech@gmail.com
+                pranavkumarkashyap@gmail.com
               </a>
             </p>
 
             <p>
               <FaGithub className="inline mr-3 text-xl" />
               <a
-                href="https://github.com/ritwikgotbugs"
+                href="https://github.com/KashyaPranav"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:underline"
               >
-                github.com/ritwikgotbugs
+                github.com/KashyaPranav
               </a>
             </p>
 
             <p>
               <FaLinkedin className="inline mr-3 text-xl" />
               <a
-                href="https://linkedin.com/in/sharmaritwik"
+                href="https://linkedin.com/in/pranavkkashyap"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:underline"
               >
-                linkedin.com/in/sharmaritwik
+                linkedin.com/in/pranavkkashyap
               </a>
             </p>
 
             <p>
               <FaFileAlt className="inline mr-3 text-xl" />
               <a
-                href="https://drive.google.com/file/d/1co0cdhSECMKSlPkkgvMAK9FlIbpQhsVK/view?usp=sharing"
+                href="https://drive.google.com/file/d/1y5Jkm59Vb_Sq54yTkm3xDh5yElaJmwOq/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:underline"

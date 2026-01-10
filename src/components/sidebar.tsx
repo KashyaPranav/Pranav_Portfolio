@@ -1,7 +1,7 @@
 import { useStaggeredAnimation } from '@/lib/utils';
 import { useRouter } from "next/router";
 import { JSX, useEffect, useMemo, useState } from "react";
-import { FiGithub, FiUser } from "react-icons/fi";
+import { FiGithub, FiUser, FiAward } from "react-icons/fi";
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import { IoFileTrayStacked } from "react-icons/io5";
 import { TbBrandLinkedin } from "react-icons/tb";
@@ -20,6 +20,7 @@ export default function Sidebar() {
     setMounted(true);
     router.prefetch('/experience');
     router.prefetch('/projects');
+    router.prefetch('/achievements');
   }, []);
   
   const handleNavigation = (goto: string) => {
@@ -30,6 +31,7 @@ export default function Sidebar() {
     { icon: <FiUser />, title: "about", goto: "/" },
     { icon: <HiOutlineOfficeBuilding />, title: "experience", goto: "/experience" },
     { icon: <IoFileTrayStacked />, title: "projects", goto: "/projects" },
+    { icon: <FiAward />, title: "achievements", goto: "/achievements" },
   ], []);
 
   const sidebarElements = useMemo(() => [
@@ -63,7 +65,7 @@ export default function Sidebar() {
               alt="Avatar"
               width={128}
               height={128}
-              className="w-32 h-32 rounded-lg object-cover"
+              className="w-32 h-32 rounded-full object-cover border-4 border-zinc-700 shadow-lg"
             />
           </div>
           
@@ -71,7 +73,7 @@ export default function Sidebar() {
             style={sidebarAnimations[1].style}
             className={`text-2xl pt-5 text-zinc-300 font-bold ${sidebarAnimations[1].className}`}
           >
-            Ritwik Sharma
+            Pranav Kashyap
           </div>
           
           <div
@@ -90,7 +92,7 @@ export default function Sidebar() {
             <button
               onClick={() =>
                 window.open(
-                  'https://drive.google.com/file/d/1co0cdhSECMKSlPkkgvMAK9FlIbpQhsVK/view?usp=sharing'
+                  'https://drive.google.com/file/d/1y5Jkm59Vb_Sq54yTkm3xDh5yElaJmwOq/view?usp=drivesdk'
                 )
               }
               className="relative  cursor-pointer border-2 border-zinc-700 bg-opacity-20 group-hover:border-transparent bg-zinc-900 text-white py-1 px-3 rounded-lg text-sm md:text-base z-10 transition-all duration-300
@@ -151,11 +153,11 @@ export default function Sidebar() {
           <hr className="border-1 border-zinc-700 my-4 mx-4" />
           <div className="flex justify-center gap-4">
             <button
-              onClick={() => window.open("https://github.com/Ritwikgotbugs", "_blank")} className="cursor-pointer text-gray-500 hover:text-white transition-colors text-2xl">
+              onClick={() => window.open("https://github.com/KashyaPranav", "_blank")} className="cursor-pointer text-gray-500 hover:text-white transition-colors text-2xl">
               <FiGithub />
             </button>
             <button
-              onClick={() => window.open("https://linkedin.com/in/sharmaritwik", "_blank")} className="cursor-pointer text-gray-500 hover:text-white transition-colors text-3xl">
+              onClick={() => window.open("https://linkedin.com/in/pranavkkashyap", "_blank")} className="cursor-pointer text-gray-500 hover:text-white transition-colors text-3xl">
               <TbBrandLinkedin />
             </button>
           </div>
