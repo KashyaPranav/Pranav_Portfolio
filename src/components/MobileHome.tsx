@@ -42,7 +42,7 @@ export default function MobileHome() {
   return (
     <div className="block md:hidden w-full min-h-screen bg-black text-white px-2 pb-8 flex flex-col justify-center items-center">
       <div className="flex flex-col items-center pt-6 pb-4">
-        <Image src="/assets/avatar.png" alt="avatar" width={96} height={96} className="w-24 h-24 rounded-full object-cover mb-2" />
+        <Image src="/assets/avatar1.png" alt="avatar1" width={96} height={96} className="w-24 h-24 rounded-full object-cover mb-2" />
         <div className="text-xl font-bold text-zinc-200">Pranav Kumar Kashyap</div>
         <div className="text-sm text-zinc-400 mb-2 italic">Software Engineer</div>
         <a

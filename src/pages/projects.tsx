@@ -38,7 +38,7 @@ export default function Projects() {
   }, [router]);
 
   const handleBackSpace = useCallback(() => {
-    router.push('/experience');
+    router.push('/certifications');
   }, [router]);
 
   useEffect(() => {
