@@ -5,6 +5,7 @@ import { FiGithub, FiUser, FiAward } from "react-icons/fi";
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import { IoFileTrayStacked } from "react-icons/io5";
 import { TbBrandLinkedin } from "react-icons/tb";
+import { MdOutlineEmojiEvents } from "react-icons/md";
 
 interface SidebarProps {
   icon?: JSX.Element;
@@ -21,6 +22,7 @@ export default function Sidebar() {
     router.prefetch('/experience');
     router.prefetch('/projects');
     router.prefetch('/achievements');
+    router.prefetch('/certifications');
   }, []);
   
   const handleNavigation = (goto: string) => {
@@ -32,10 +34,11 @@ export default function Sidebar() {
     { icon: <HiOutlineOfficeBuilding />, title: "experience", goto: "/experience" },
     { icon: <IoFileTrayStacked />, title: "projects", goto: "/projects" },
     { icon: <FiAward />, title: "achievements", goto: "/achievements" },
+    { icon: <MdOutlineEmojiEvents />, title: "certifications", goto: "/certifications" },
   ], []);
 
   const sidebarElements = useMemo(() => [
-    { type: 'avatar' },
+    { type: 'avatar1' },
     { type: 'title' },
     { type: 'subtitle' },
     { type: 'resume' },
@@ -61,8 +64,8 @@ export default function Sidebar() {
             className={`${sidebarAnimations[0].className}`}
           >
             <img
-              src="/assets/avatar.png"
-              alt="Avatar"
+              src="/assets/avatar1.png"
+              alt="avatar1"
               width={128}
               height={128}
               className="w-32 h-32 rounded-full object-cover border-4 border-zinc-700 shadow-lg"

@@ -12,6 +12,7 @@ interface ProjectsTileProps {
   img2?: string;
   githubUrl?: string;
   url?: string;
+  certificateUrl?: string;
   stack: string[];
   logo?: string;
   isApp?: boolean;
@@ -25,6 +26,7 @@ export const ProjectsTile = ({
   subtitle,
   githubUrl,
   url,
+  certificateUrl,
   stack,
   isLive = true,
   isCodeLive = true,
@@ -82,6 +84,13 @@ export const ProjectsTile = ({
               onClick={() => window.open(url, '_blank')}>
               <IoGlobeOutline className="text-black mr-2 text-lg" /> {isCertified ? 'certificate' : 'project'}
             </div>
+            {certificateUrl && (
+              <div
+                className="w-full py-2 flex items-center justify-center text-black text-xs md:text-sm rounded-md bg-blue-300 hover:bg-blue-200 cursor-pointer transition"
+                onClick={() => window.open(certificateUrl, '_blank')}>
+                <IoGlobeOutline className="text-black mr-2 text-lg" /> certificate
+              </div>
+            )}
           </div>
 
 

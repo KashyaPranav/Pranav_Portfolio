@@ -34,5 +34,13 @@
     "img1": "/assets/agentvinod1.png",
     "isCodeLive": true,
     "features": "Integrated speech-to-text, resume parsing, and evaluation agents to score responses using structured JSON[cite: 41]."
+  },
+  {
+    "title": "GeoSpace: Research Paper",
+    "subtitle": "Developing a scalable remote sensing framework using computer vision and image analysis to detect Earth surface changes; currently undergoing the publication process.",
+    "githubUrl": "https://github.com/KashyaPranav/GeoSpace",
+    "stack": ["Python", "SentinelHub", "PyTorch", "OpenCV"],
+    "isLive": false,
+    "isCodeLive": true
   }
 ]

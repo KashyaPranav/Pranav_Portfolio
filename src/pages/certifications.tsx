@@ -5,38 +5,36 @@ import { useRouter } from 'next/navigation';
 import { useCallback, useEffect, useState } from 'react';
 import { ProjectsTile } from '../components/projects';
 
-interface AchievementProps {
+interface CertificationProps {
   title: string;
   subtitle: string;
-  githubUrl: string;
   url: string;
   stack: string[];
-  isLive?: boolean;
-  isCodeLive?: boolean;
+  isCertified?: boolean;
 }
 
-const fetchAchievements = async (): Promise<AchievementProps[]> => {
-  const response = await fetch('/achievements.json');
+const fetchCertifications = async (): Promise<CertificationProps[]> => {
+  const response = await fetch('/certifications.json');
   if (!response.ok) {
-    throw new Error('Failed to fetch achievements data');
+    throw new Error('Failed to fetch certifications data');
   }
   return response.json();
 };
 
-export default function Achievements() {
-  const [achievements, setAchievements] = useState<AchievementProps[]>([]);
+export default function Certifications() {
+  const [certifications, setCertifications] = useState<CertificationProps[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   const router = useRouter();
-  const achievementsAnimations = useStaggeredAnimation(achievements, 100);
+  const certificationsAnimations = useStaggeredAnimation(certifications, 100);
 
   const handleEnter = useCallback(() => {
-    router.push('/certifications');
+    router.push('/projects');
   }, [router]);
 
   const handleBackSpace = useCallback(() => {
-    router.push('/experience');
+    router.push('/achievements');
   }, [router]);
 
   useEffect(() => {
@@ -54,27 +52,27 @@ export default function Achievements() {
   }, [handleEnter, handleBackSpace]);
 
   useEffect(() => {
-    const loadAchievements = async () => {
+    const loadCertifications = async () => {
       try {
-        const data = await fetchAchievements();
-        setAchievements(data);
+        const data = await fetchCertifications();
+        setCertifications(data);
       } catch (err) {
         setError((err as Error).message);
       } finally {
         setLoading(false);
       }
     };
-    loadAchievements();
+    loadCertifications();
   }, []);
 
   if (loading) {
     return (
       <div className="flex gap-5 flex-col animate-fadeInUp pb-10">
         <h1 className="text-4xl font-bold leading-tight mb-3">
-          <span className="text-zinc-300 px-5">achievements</span>
+          <span className="text-zinc-300 px-5">certifications</span>
         </h1>
         <div className="flex justify-center items-center h-64">
-          <div className="text-zinc-500">Loading achievements...</div>
+          <div className="text-zinc-500">Loading certifications...</div>
         </div>
       </div>
     );
@@ -84,7 +82,7 @@ export default function Achievements() {
     return (
       <div className="flex gap-5 flex-col animate-fadeInUp pb-10">
         <h1 className="text-4xl font-bold leading-tight mb-3">
-          <span className="text-zinc-300 px-5">achievements</span>
+          <span className="text-zinc-300 px-5">certifications</span>
         </h1>
         <div className="flex justify-center items-center h-64">
           <p className="text-red-500 font-mono">{error}</p>
@@ -96,15 +94,15 @@ export default function Achievements() {
   return (
     <div className="flex gap-5 flex-col animate-fadeInUp pb-10">
       <h1 className="text-4xl font-bold leading-tight mb-3">
-        <span className="text-zinc-300 px-5">achievements</span>
+        <span className="text-zinc-300 px-5">certifications</span>
       </h1>
       <div className="flex justify-center px-5">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {achievements.map((item, index) => (
+          {certifications.map((item, index) => (
             <div
               key={index}
-              style={achievementsAnimations[index].style}
-              className={`${achievementsAnimations[index].className} w-full h-full`}
+              style={certificationsAnimations[index].style}
+              className={`${certificationsAnimations[index].className} w-full h-full`}
             >
               <ProjectsTile {...item} />
             </div>

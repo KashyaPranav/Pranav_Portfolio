@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Oracle Cloud Infrastructure Certificate",
+    "subtitle": "Certified in designing and deploying scalable, high-performance cloud architectures with a focus on core OCI services and security best practices.",
+    "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=048CA7AABBAF49ADA8C31F85849DEF23917EF397734C7C940AC1986DEDD2E881",
+    "stack": ["Oracle Cloud", "Infrastructure", "Security", "Scalability"],
+    "isCertified": true
+  },
+  {
+    "title": "Google Generative AI Certificate",
+    "subtitle": "Validated expertise in Large Language Models (LLMs), responsible AI practices, and building generative applications using Google Cloud's AI suite.",
+    "url": "https://www.coursera.org/account/accomplishments/verify/81O0UZDWWXG7",
+    "stack": ["Google Gemini API", "LLMs", "Generative AI", "Google Cloud"],
+    "isCertified": true
+  },
+  {
+    "title": "NPTEL Programming in Java Certificate",
+    "subtitle": "NPTEL Certified in Programming in Java: Accomplished a rigorous academic certification covering advanced OOP concepts, multi-threading, and robust application development.",
+    "url": "https://archive.nptel.ac.in/content/noc/NOC23/SEM2/Ecertificates/106/noc23-cs74/Course/NPTEL23CS74S9335020920295452.pdf",
+    "stack": ["Java", "OOP", "Multi-threading", "Exception Handling"],
+    "isCertified": true
+  }
+]

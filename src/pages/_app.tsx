@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@pranavkumarkashyap" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="assets/avatar.png" />
+        <link rel="icon" href="/assets/avatar1.png" />
       </Head>
 
       <main>
