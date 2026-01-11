@@ -32,11 +32,13 @@ export default function MobileHome() {
   const [experience, setExperience] = useState<ExperienceProps[]>([]);
   const [projects, setProjects] = useState<ProjectsTileProps[]>([]);
   const [achievements, setAchievements] = useState<ProjectsTileProps[]>([]);
+  const [certifications, setCertifications] = useState<ProjectsTileProps[]>([]);
 
   useEffect(() => {
     fetch('/experience.json').then(res => res.json()).then(setExperience);
     fetch('/projects.json').then(res => res.json()).then(setProjects);
     fetch('/achievements.json').then(res => res.json()).then(setAchievements);
+    fetch('/certifications.json').then(res => res.json()).then(setCertifications);
   }, []);
 
   return (
@@ -113,6 +115,24 @@ export default function MobileHome() {
                 <CarouselItem key={idx} className="p-2">
                   <div className="rounded-lg px-6">
                     <ProjectsTile {...ach} />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center w-full mt-2">
+        <div className="text-lg font-semibold text-zinc-200">Certifications</div>
+        <div className="text-xs text-zinc-600 mb-1">swipe left</div>
+        <div className="w-full">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {certifications.map((cert, idx) => (
+                <CarouselItem key={idx} className="p-2">
+                  <div className="rounded-lg px-6">
+                    <ProjectsTile {...cert} />
                   </div>
                 </CarouselItem>
               ))}
