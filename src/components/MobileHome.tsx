@@ -59,8 +59,10 @@ export default function MobileHome() {
 
       <div className="mb-4 rounded-lg">
         <div className="text-lg font-bold text-zinc-300 mb-1">about</div>
-        <div className="text-zinc-400 text-xs mb-4">
-          Building what works — a software engineer.
+        <div className="text-zinc-400 text-xs mb-4 space-y-1">
+          <p>8th-semester CSE student at SRM IST, Chennai (CGPA 9.24/10)</p>
+          <p>Former SDE Intern at Reliance Jio Platforms Limited (RCP)</p>
+          <p>Winner of 4 national-level hackathons</p>
         </div>
         <div className="flex flex-col gap-1 mt-2">
           <a href="mailto:pranavkumarkashyap@gmail.com" className="flex items-center gap-2 text-blue-400 text-xs"><IoIosAt /> pranavkumarkashyap@gmail.com</a>
