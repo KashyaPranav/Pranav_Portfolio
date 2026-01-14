@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoIosAt } from 'react-icons/io';
 import { Experience as ExperienceCard } from './experience';
 import { ProjectsTile } from './projects';
-import { Carousel, CarouselApi, CarouselContent, CarouselItem } from './ui/carousel';
+import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
 
 interface ExperienceProps {
   tech: string[];
@@ -34,121 +34,12 @@ export default function MobileHome() {
   const [achievements, setAchievements] = useState<ProjectsTileProps[]>([]);
   const [certifications, setCertifications] = useState<ProjectsTileProps[]>([]);
 
-  const [experienceApi, setExperienceApi] = useState<CarouselApi | null>(null);
-  const [projectsApi, setProjectsApi] = useState<CarouselApi | null>(null);
-  const [achievementsApi, setAchievementsApi] = useState<CarouselApi | null>(null);
-  const [certificationsApi, setCertificationsApi] = useState<CarouselApi | null>(null);
-
   useEffect(() => {
     fetch('/experience.json').then(res => res.json()).then(setExperience);
     fetch('/projects.json').then(res => res.json()).then(setProjects);
     fetch('/achievements.json').then(res => res.json()).then(setAchievements);
     fetch('/certifications.json').then(res => res.json()).then(setCertifications);
   }, []);
-
-  useEffect(() => {
-    if (!experienceApi || !experience.length) return;
-
-    let direction: 'next' | 'prev' = 'next';
-    const interval = setInterval(() => {
-      if (!experienceApi) return;
-      if (direction === 'next') {
-        if (experienceApi.canScrollNext()) {
-          experienceApi.scrollNext();
-        } else {
-          direction = 'prev';
-          experienceApi.scrollPrev();
-        }
-      } else {
-        if (experienceApi.canScrollPrev()) {
-          experienceApi.scrollPrev();
-        } else {
-          direction = 'next';
-          experienceApi.scrollNext();
-        }
-      }
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [experienceApi, experience.length]);
-
-  useEffect(() => {
-    if (!projectsApi || !projects.length) return;
-
-    let direction: 'next' | 'prev' = 'next';
-    const interval = setInterval(() => {
-      if (!projectsApi) return;
-      if (direction === 'next') {
-        if (projectsApi.canScrollNext()) {
-          projectsApi.scrollNext();
-        } else {
-          direction = 'prev';
-          projectsApi.scrollPrev();
-        }
-      } else {
-        if (projectsApi.canScrollPrev()) {
-          projectsApi.scrollPrev();
-        } else {
-          direction = 'next';
-          projectsApi.scrollNext();
-        }
-      }
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [projectsApi, projects.length]);
-
-  useEffect(() => {
-    if (!achievementsApi || !achievements.length) return;
-
-    let direction: 'next' | 'prev' = 'next';
-    const interval = setInterval(() => {
-      if (!achievementsApi) return;
-      if (direction === 'next') {
-        if (achievementsApi.canScrollNext()) {
-          achievementsApi.scrollNext();
-        } else {
-          direction = 'prev';
-          achievementsApi.scrollPrev();
-        }
-      } else {
-        if (achievementsApi.canScrollPrev()) {
-          achievementsApi.scrollPrev();
-        } else {
-          direction = 'next';
-          achievementsApi.scrollNext();
-        }
-      }
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [achievementsApi, achievements.length]);
-
-  useEffect(() => {
-    if (!certificationsApi || !certifications.length) return;
-
-    let direction: 'next' | 'prev' = 'next';
-    const interval = setInterval(() => {
-      if (!certificationsApi) return;
-      if (direction === 'next') {
-        if (certificationsApi.canScrollNext()) {
-          certificationsApi.scrollNext();
-        } else {
-          direction = 'prev';
-          certificationsApi.scrollPrev();
-        }
-      } else {
-        if (certificationsApi.canScrollPrev()) {
-          certificationsApi.scrollPrev();
-        } else {
-          direction = 'next';
-          certificationsApi.scrollNext();
-        }
-      }
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [certificationsApi, certifications.length]);
 
   return (
     <div className="block md:hidden w-full min-h-screen bg-black text-white px-2 pb-8 flex flex-col justify-center items-center">
@@ -169,9 +60,9 @@ export default function MobileHome() {
       <div className="mb-4 rounded-lg">
         <div className="text-lg font-bold text-zinc-300 mb-1">about</div>
         <ul className="text-zinc-400 text-xs mb-4 space-y-1 list-disc list-inside">
-          <li><span className="font-bold text-white">8th-semester CSE student at SRM IST, Chennai with a 9.3/10 CGPA</span></li>
-          <li><span className="font-bold text-white">Former SDE Intern at Reliance Jio Platforms Limited, RCP</span></li>
-          <li><span className="font-bold text-white">Winner of 4 national-level hackathons</span></li>
+          <li>8th-semester CSE student at SRM IST, Chennai with a 9.3/10 CGPA</li>
+          <li>Former SDE Intern at Reliance Jio Platforms Limited, RCP</li>
+          <li>Winner of 4 national-level hackathons</li>
         </ul>
         <div className="flex flex-col gap-1 mt-2">
           <a href="mailto:pranavkumarkashyap@gmail.com" className="flex items-center gap-2 text-blue-400 text-xs"><IoIosAt /> pranavkumarkashyap@gmail.com</a>
@@ -184,7 +75,7 @@ export default function MobileHome() {
         <div className="text-lg font-semibold text-zinc-200 ">Experience</div>
         <div className="text-xs text-zinc-600 mb-1">swipe left</div>
         <div className="w-full">
-          <Carousel className="w-full" setApi={setExperienceApi}>
+          <Carousel className="w-full">
             <CarouselContent>
               {experience.map((exp, idx) => (
                 <CarouselItem key={idx} className="px-2">
@@ -202,7 +93,7 @@ export default function MobileHome() {
         <div className="text-lg font-semibold text-zinc-200">Projects</div>
         <div className="text-xs text-zinc-600 mb-1">swipe left</div>
         <div className="w-full">
-          <Carousel className="w-full" setApi={setProjectsApi}>
+          <Carousel className="w-full">
             <CarouselContent>
               {projects.map((proj, idx) => (
                 <CarouselItem key={idx} className="p-2">
@@ -220,7 +111,7 @@ export default function MobileHome() {
         <div className="text-lg font-semibold text-zinc-200">Achievements</div>
         <div className="text-xs text-zinc-600 mb-1">swipe left</div>
         <div className="w-full">
-          <Carousel className="w-full" setApi={setAchievementsApi}>
+          <Carousel className="w-full">
             <CarouselContent>
               {achievements.map((ach, idx) => (
                 <CarouselItem key={idx} className="p-2">
@@ -238,7 +129,7 @@ export default function MobileHome() {
         <div className="text-lg font-semibold text-zinc-200">Certifications</div>
         <div className="text-xs text-zinc-600 mb-1">swipe left</div>
         <div className="w-full">
-          <Carousel className="w-full" setApi={setCertificationsApi}>
+          <Carousel className="w-full">
             <CarouselContent>
               {certifications.map((cert, idx) => (
                 <CarouselItem key={idx} className="p-2">
