@@ -60,7 +60,7 @@ export default function MobileHome() {
       <div className="mb-4 rounded-lg">
         <div className="text-lg font-bold text-zinc-300 mb-1">about</div>
         <ul className="text-zinc-400 text-xs mb-4 space-y-1 list-disc pl-5">
-          <li>8th-semester CSE student at SRM IST, Chennai with a 9.3/10 CGPA</li>
+          <li>8th-semester CSE student at SRM IST, Chennai with a 9.24/10 CGPA</li>
           <li>Former SDE Intern at Reliance Jio Platforms Limited, RCP</li>
           <li>Winner of 4 national-level hackathons</li>
         </ul>

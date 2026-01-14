@@ -87,7 +87,7 @@ export default function AboutPage() {
             className={`text-zinc-500 text-sm space-y-2 font-normal ${aboutAnimations[2].className}`}
           >
             <ul className="list-disc list-inside space-y-1.5">
-              <li><span className="font-bold text-white">8th-semester CSE student at SRM IST, Chennai</span>  <span className="font-bold text-white">with a 9.3/10 CGPA</span></li>
+              <li><span className="font-bold text-white">8th-semester CSE student at SRM IST, Chennai</span>  <span className="font-bold text-white">with a 9.24/10 CGPA</span></li>
               <li> <span className="font-bold text-white">Former SDE Intern at Reliance Jio Platforms Limited, RCP</span></li>
               <li><span className="font-bold text-white">Winner of 4 national-level hackathons</span> </li>
             </ul>
