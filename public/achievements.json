@@ -21,14 +21,14 @@
     "subtitle": "Won a 24-hour national hackathon with an AI-powered accessibility assistant for visually impaired users.",
     "url": "https://chain-cover.netlify.app/",
     "isLive": true,
-    "certificateUrl": "/assets/hackverse.jpg",
+    "certificateUrl": "/assets/Hackverse.JPG",
     "stack": ["Solidity", "React.js", "Metamask", "TailwindCSS"],
     "isCodeLive": false
   },{
     "title": "MOZO HACK 6.0 Leaderboard",
     "subtitle": "Leveraging Retrieval-Augmented Generation to deliver verified medical diagnoses and medication advice in real-time. Smart tech for emergency response.",
     "githubUrl": "https://github.com/KashyaPranav/medical_assist",
-    "certificateUrl": "/assets/mozohack.jpg",
+    "certificateUrl": "/assets/Mozohack.JPG",
     "url": "https://chain-cover.netlify.app/",
     "stack": ["Python", "Langchain", "ChromaDB", "Verified PDF","GPT-4"],
     "isLive": false,

@@ -5,7 +5,7 @@
     "duration": "Dec. 2024 – Jan. 2025",
     "location": "Mumbai, India",
     "description": [
-      "Designed and developed the Jio Associate Verification System, a secure platform for field associate validation using Node.js, Express.js, and MongoDB.",
+      "Worked on the Jio Associate Verification System, a secure platform for field associate validation using Node.js & Express.js.",
       "Integrated OTP-based authentication, JWT authorization, and AES-256 encryption ensuring compliance with GDPR and enterprise security standards.",
       "Collaborated with Flutter frontend and backend teams to establish modular architecture.",
       "Documented full-stack architecture and CI/CD workflow to ensure scalability and maintainability."
