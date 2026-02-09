@@ -6,7 +6,7 @@
     "certificateUrl": "/assets/hackathon9.jpg",
     "stack": ["Python", "OpenCV", "PyTorch", "YOLO","Mediapipe"],
     "isLive": false,
-    "isCodeLive": true
+    "isCodeLive": false
   },{
     "title": "DR.(MRS). SARAN BHATTACHARYA INNOVATION AWARD",
     "subtitle": "Honoured to receive the Dr. (Mrs.) Saran Bhattacharya Innovation Award for Secure Blink, a project focused on building secure, intelligent authentication through computer vision and AI.",
