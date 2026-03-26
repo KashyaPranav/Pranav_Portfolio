@@ -32,7 +32,7 @@
     "url": "https://chain-cover.netlify.app/",
     "stack": ["Python", "Langchain", "ChromaDB", "Verified PDF","GPT-4"],
     "isLive": false,
-    "isCodeLive": true
+    "isCodeLive": false
   },
   {
     "title": "OODP Hack'23 Finalist",
