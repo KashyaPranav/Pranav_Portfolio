@@ -34,7 +34,6 @@ export default function MobileHome() {
   const [projects, setProjects] = useState<ProjectsTileProps[]>([]);
   const [achievements, setAchievements] = useState<ProjectsTileProps[]>([]);
   const [certifications, setCertifications] = useState<ProjectsTileProps[]>([]);
-  const [showSwipeHints, setShowSwipeHints] = useState(false);
 
   useEffect(() => {
     fetch('/experience.json').then(res => res.json()).then(setExperience);
@@ -43,29 +42,8 @@ export default function MobileHome() {
     fetch('/certifications.json').then(res => res.json()).then(setCertifications);
   }, []);
 
-  useEffect(() => {
-    const hasLoadedAllSections =
-      experience.length > 0 &&
-      projects.length > 0 &&
-      achievements.length > 0 &&
-      certifications.length > 0;
-
-    if (!hasLoadedAllSections) {
-      return;
-    }
-
-    const timer = window.setTimeout(() => {
-      setShowSwipeHints(true);
-    }, 250);
-
-    return () => window.clearTimeout(timer);
-  }, [experience.length, projects.length, achievements.length, certifications.length]);
-
   const swipeHintStyle = (delay: number) =>
     ({ '--swipe-hint-delay': `${delay}ms` } as CSSProperties);
-
-  const swipeHintClassName = showSwipeHints ? 'animate-swipe-hint-left' : '';
-  const swipeTextClassName = showSwipeHints ? 'animate-swipe-hint-text' : '';
 
   return (
     <div className="block md:hidden w-full min-h-screen bg-black text-white px-2 pb-8 flex flex-col justify-center items-center">
@@ -100,14 +78,9 @@ export default function MobileHome() {
 
       <div className="mt-2 mb-2 flex flex-col items-center w-full">
         <div className="text-lg font-semibold text-zinc-200 ">Experience</div>
-        <div
-          className={`text-xs text-zinc-600 mb-1 ${swipeTextClassName}`}
-          style={swipeHintStyle(350)}
-        >
-          swipe left
-        </div>
+        <div className="text-xs text-zinc-600 mb-1">swipe left</div>
         <div className="w-full">
-          <div className={swipeHintClassName} style={swipeHintStyle(350)}>
+          <div className="animate-swipe-hint-left" style={swipeHintStyle(350)}>
             <Carousel className="w-full">
               <CarouselContent>
               {experience.map((exp, idx) => (
@@ -125,14 +98,9 @@ export default function MobileHome() {
 
       <div className="flex flex-col items-center w-full">
         <div className="text-lg font-semibold text-zinc-200">Projects</div>
-        <div
-          className={`text-xs text-zinc-600 mb-1 ${swipeTextClassName}`}
-          style={swipeHintStyle(650)}
-        >
-          swipe left
-        </div>
+        <div className="text-xs text-zinc-600 mb-1">swipe left</div>
         <div className="w-full">
-          <div className={swipeHintClassName} style={swipeHintStyle(650)}>
+          <div className="animate-swipe-hint-left" style={swipeHintStyle(650)}>
             <Carousel className="w-full">
               <CarouselContent>
               {projects.map((proj, idx) => (
@@ -150,14 +118,9 @@ export default function MobileHome() {
 
       <div className="flex flex-col items-center w-full">
         <div className="text-lg font-semibold text-zinc-200">Achievements</div>
-        <div
-          className={`text-xs text-zinc-600 mb-1 ${swipeTextClassName}`}
-          style={swipeHintStyle(950)}
-        >
-          swipe left
-        </div>
+        <div className="text-xs text-zinc-600 mb-1">swipe left</div>
         <div className="w-full">
-          <div className={swipeHintClassName} style={swipeHintStyle(950)}>
+          <div className="animate-swipe-hint-left" style={swipeHintStyle(950)}>
             <Carousel className="w-full">
               <CarouselContent>
               {achievements.map((ach, idx) => (
@@ -175,14 +138,9 @@ export default function MobileHome() {
 
       <div className="flex flex-col items-center w-full mt-2">
         <div className="text-lg font-semibold text-zinc-200">Certifications</div>
-        <div
-          className={`text-xs text-zinc-600 mb-1 ${swipeTextClassName}`}
-          style={swipeHintStyle(1250)}
-        >
-          swipe left
-        </div>
+        <div className="text-xs text-zinc-600 mb-1">swipe left</div>
         <div className="w-full">
-          <div className={swipeHintClassName} style={swipeHintStyle(1250)}>
+          <div className="animate-swipe-hint-left" style={swipeHintStyle(1250)}>
             <Carousel className="w-full">
               <CarouselContent>
               {certifications.map((cert, idx) => (
