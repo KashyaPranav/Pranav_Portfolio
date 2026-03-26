@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import type { CSSProperties } from 'react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoIosAt } from 'react-icons/io';
 import { Experience as ExperienceCard } from './experience';
@@ -34,8 +34,6 @@ export default function MobileHome() {
   const [projects, setProjects] = useState<ProjectsTileProps[]>([]);
   const [achievements, setAchievements] = useState<ProjectsTileProps[]>([]);
   const [certifications, setCertifications] = useState<ProjectsTileProps[]>([]);
-  const [activeHints, setActiveHints] = useState<Record<string, boolean>>({});
-  const sectionRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   useEffect(() => {
     fetch('/experience.json').then(res => res.json()).then(setExperience);
@@ -44,45 +42,8 @@ export default function MobileHome() {
     fetch('/certifications.json').then(res => res.json()).then(setCertifications);
   }, []);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const sectionId = entry.target.getAttribute('data-section-id');
-
-          if (!sectionId || !entry.isIntersecting || entry.intersectionRatio < 0.75) {
-            return;
-          }
-
-          setActiveHints((current) => {
-            if (current[sectionId]) {
-              return current;
-            }
-
-            return { ...current, [sectionId]: true };
-          });
-        });
-      },
-      {
-        threshold: [0.75],
-      }
-    );
-
-    const sections = Object.values(sectionRefs.current).filter(
-      (section): section is HTMLDivElement => section !== null
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
-  }, [experience.length, projects.length, achievements.length, certifications.length]);
-
-  const tiltHintStyle = () =>
-    ({ '--swipe-hint-delay': '0ms' } as CSSProperties);
-  const tiltHintClassName = (sectionId: string) =>
-    sectionId === 'experience' && activeHints[sectionId] ? 'animate-swipe-hint-left' : '';
-  const tiltTextClassName = (sectionId: string) =>
-    sectionId === 'experience' && activeHints[sectionId] ? 'animate-swipe-hint-text' : '';
+  const swipeHintStyle = (delay: number) =>
+    ({ '--swipe-hint-delay': `${delay}ms` } as CSSProperties);
 
   return (
     <div className="block md:hidden w-full min-h-screen bg-black text-white px-2 pb-8 flex flex-col justify-center items-center">
@@ -115,19 +76,11 @@ export default function MobileHome() {
         </div>
       </div>
 
-      <div
-        ref={(node) => {
-          sectionRefs.current.experience = node;
-        }}
-        data-section-id="experience"
-        className="mt-2 mb-2 flex flex-col items-center w-full"
-      >
+      <div className="mt-2 mb-2 flex flex-col items-center w-full">
         <div className="text-lg font-semibold text-zinc-200 ">Experience</div>
-        <div className={`text-xs text-zinc-600 mb-1 ${tiltTextClassName('experience')}`}>
-          swipe left
-        </div>
+        <div className="text-xs text-zinc-400 mb-1">swipe left</div>
         <div className="w-full">
-          <div className={tiltHintClassName('experience')} style={tiltHintStyle()}>
+          <div className="animate-swipe-hint-left" style={swipeHintStyle(350)}>
             <Carousel className="w-full">
               <CarouselContent>
               {experience.map((exp, idx) => (
@@ -143,19 +96,11 @@ export default function MobileHome() {
         </div>
       </div>
 
-      <div
-        ref={(node) => {
-          sectionRefs.current.projects = node;
-        }}
-        data-section-id="projects"
-        className="flex flex-col items-center w-full"
-      >
+      <div className="flex flex-col items-center w-full">
         <div className="text-lg font-semibold text-zinc-200">Projects</div>
-        <div className={`text-xs text-zinc-600 mb-1 ${tiltTextClassName('projects')}`}>
-          swipe left
-        </div>
+        <div className="text-xs text-zinc-400 mb-1">swipe left</div>
         <div className="w-full">
-          <div className={tiltHintClassName('projects')} style={tiltHintStyle()}>
+          <div className="animate-swipe-hint-left" style={swipeHintStyle(650)}>
             <Carousel className="w-full">
               <CarouselContent>
               {projects.map((proj, idx) => (
@@ -171,19 +116,11 @@ export default function MobileHome() {
         </div>
       </div>
 
-      <div
-        ref={(node) => {
-          sectionRefs.current.achievements = node;
-        }}
-        data-section-id="achievements"
-        className="flex flex-col items-center w-full"
-      >
+      <div className="flex flex-col items-center w-full">
         <div className="text-lg font-semibold text-zinc-200">Achievements</div>
-        <div className={`text-xs text-zinc-600 mb-1 ${tiltTextClassName('achievements')}`}>
-          swipe left
-        </div>
+        <div className="text-xs text-zinc-400 mb-1">swipe left</div>
         <div className="w-full">
-          <div className={tiltHintClassName('achievements')} style={tiltHintStyle()}>
+          <div className="animate-swipe-hint-left" style={swipeHintStyle(950)}>
             <Carousel className="w-full">
               <CarouselContent>
               {achievements.map((ach, idx) => (
@@ -199,19 +136,11 @@ export default function MobileHome() {
         </div>
       </div>
 
-      <div
-        ref={(node) => {
-          sectionRefs.current.certifications = node;
-        }}
-        data-section-id="certifications"
-        className="flex flex-col items-center w-full mt-2"
-      >
+      <div className="flex flex-col items-center w-full mt-2">
         <div className="text-lg font-semibold text-zinc-200">Certifications</div>
-        <div className={`text-xs text-zinc-600 mb-1 ${tiltTextClassName('certifications')}`}>
-          swipe left
-        </div>
+        <div className="text-xs text-zinc-400 mb-1">swipe left</div>
         <div className="w-full">
-          <div className={tiltHintClassName('certifications')} style={tiltHintStyle()}>
+          <div className="animate-swipe-hint-left" style={swipeHintStyle(1250)}>
             <Carousel className="w-full">
               <CarouselContent>
               {certifications.map((cert, idx) => (
