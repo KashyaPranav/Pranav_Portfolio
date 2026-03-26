@@ -38,9 +38,18 @@
   {
     "title": "GeoSpace: Research Paper",
     "subtitle": "Developing a scalable remote sensing framework using computer vision and image analysis to detect Earth surface changes; currently undergoing the publication process.",
-    "githubUrl": "https://github.com/KashyaPranav/GeoSpace",
+    "githubUrl": "https://github.com/KashyaPranav/GeoTel",
     "stack": ["Python", "SentinelHub", "PyTorch", "OpenCV"],
     "isLive": false,
     "isCodeLive": true
+  },
+  {
+    "title": "Cash at what path?",
+    "subtitle": "An interactive explorer for visualizing the order-to-cash workflow with a clean, user-friendly interface.",
+    "githubUrl": "https://github.com/KashyaPranav/order-to-cash-explorer",
+    "url": "https://cashwhatpath.vercel.app/",
+    "isLive": true,
+    "isCodeLive": true,
+    "stack": ["Grok", "Python", "FastAPI", "JavaScript"]
   }
 ]
