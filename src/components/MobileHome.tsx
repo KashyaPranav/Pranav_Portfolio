@@ -80,11 +80,9 @@ export default function MobileHome() {
         <div className="text-lg font-semibold text-zinc-200 ">Experience</div>
         <div className="text-xs text-zinc-600 mb-1">swipe left</div>
         <div className="w-full">
-          <Carousel className="w-full">
-            <CarouselContent
-              className="animate-swipe-hint-left"
-              style={swipeHintStyle(350)}
-            >
+          <div className="animate-swipe-hint-left" style={swipeHintStyle(350)}>
+            <Carousel className="w-full">
+              <CarouselContent>
               {experience.map((exp, idx) => (
                 <CarouselItem key={idx} className="px-2">
                   <div className="rounded-lg px-6 justify-end">
@@ -92,8 +90,9 @@ export default function MobileHome() {
                   </div>
                 </CarouselItem>
               ))}
-            </CarouselContent>
-          </Carousel>
+              </CarouselContent>
+            </Carousel>
+          </div>
         </div>
       </div>
 
@@ -101,11 +100,9 @@ export default function MobileHome() {
         <div className="text-lg font-semibold text-zinc-200">Projects</div>
         <div className="text-xs text-zinc-600 mb-1">swipe left</div>
         <div className="w-full">
-          <Carousel className="w-full">
-            <CarouselContent
-              className="animate-swipe-hint-left"
-              style={swipeHintStyle(650)}
-            >
+          <div className="animate-swipe-hint-left" style={swipeHintStyle(650)}>
+            <Carousel className="w-full">
+              <CarouselContent>
               {projects.map((proj, idx) => (
                 <CarouselItem key={idx} className="p-2">
                   <div className="rounded-lg px-6">
@@ -113,8 +110,9 @@ export default function MobileHome() {
                   </div>
                 </CarouselItem>
               ))}
-            </CarouselContent>
-          </Carousel>
+              </CarouselContent>
+            </Carousel>
+          </div>
         </div>
       </div>
 
@@ -122,11 +120,9 @@ export default function MobileHome() {
         <div className="text-lg font-semibold text-zinc-200">Achievements</div>
         <div className="text-xs text-zinc-600 mb-1">swipe left</div>
         <div className="w-full">
-          <Carousel className="w-full">
-            <CarouselContent
-              className="animate-swipe-hint-left"
-              style={swipeHintStyle(950)}
-            >
+          <div className="animate-swipe-hint-left" style={swipeHintStyle(950)}>
+            <Carousel className="w-full">
+              <CarouselContent>
               {achievements.map((ach, idx) => (
                 <CarouselItem key={idx} className="p-2">
                   <div className="rounded-lg px-6">
@@ -134,8 +130,9 @@ export default function MobileHome() {
                   </div>
                 </CarouselItem>
               ))}
-            </CarouselContent>
-          </Carousel>
+              </CarouselContent>
+            </Carousel>
+          </div>
         </div>
       </div>
 
@@ -143,11 +140,9 @@ export default function MobileHome() {
         <div className="text-lg font-semibold text-zinc-200">Certifications</div>
         <div className="text-xs text-zinc-600 mb-1">swipe left</div>
         <div className="w-full">
-          <Carousel className="w-full">
-            <CarouselContent
-              className="animate-swipe-hint-left"
-              style={swipeHintStyle(1250)}
-            >
+          <div className="animate-swipe-hint-left" style={swipeHintStyle(1250)}>
+            <Carousel className="w-full">
+              <CarouselContent>
               {certifications.map((cert, idx) => (
                 <CarouselItem key={idx} className="p-2">
                   <div className="rounded-lg px-6">
@@ -155,8 +150,9 @@ export default function MobileHome() {
                   </div>
                 </CarouselItem>
               ))}
-            </CarouselContent>
-          </Carousel>
+              </CarouselContent>
+            </Carousel>
+          </div>
         </div>
       </div>
 
