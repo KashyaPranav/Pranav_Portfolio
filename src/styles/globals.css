@@ -57,6 +57,28 @@ html, body {
     animation-delay: var(--swipe-hint-delay, 0ms);
     animation-fill-mode: both;
   }
+
+  @keyframes swipeHintText {
+    0%,
+    100% {
+      opacity: 0.55;
+      transform: translateX(0);
+    }
+    35% {
+      opacity: 1;
+      transform: translateX(-8px);
+    }
+    70% {
+      opacity: 0.8;
+      transform: translateX(-3px);
+    }
+  }
+
+  .animate-swipe-hint-text {
+    animation: swipeHintText 650ms ease-in-out;
+    animation-delay: var(--swipe-hint-delay, 0ms);
+    animation-fill-mode: both;
+  }
 }
 
 :root {
