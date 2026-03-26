@@ -38,6 +38,27 @@ html, body {
   .animation-delay-900 { animation-delay: 900ms; }
 }
 
+@layer utilities {
+  @keyframes swipeHintLeft {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    35% {
+      transform: translateX(-14px);
+    }
+    70% {
+      transform: translateX(-6px);
+    }
+  }
+
+  .animate-swipe-hint-left {
+    animation: swipeHintLeft 650ms ease-in-out;
+    animation-delay: var(--swipe-hint-delay, 0ms);
+    animation-fill-mode: both;
+  }
+}
+
 :root {
   --font-jetbrains-mono: "JetBrains Mono", monospace;
 }

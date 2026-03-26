@@ -48,7 +48,7 @@ export default function AboutPage() {
       'C++', 'Python', 'JavaScript', 'C', 'SQL'  
     ],
     frameworks: [
-      'Node.js', 'Express.js','REST APIs', 'React.js', 'PyTorch', 'OpenCV', 'Streamlit' 
+      'Node.js', 'Express.js','REST APIs', 'React.js', 'PyTorch', 'OpenCV', 'Streamlit', 'FastAPI'
     ],
     devops: [
       'AWS', 'Oracle Cloud', 'Docker', 'Kubernetes', 'CI/CD', 'Git' 
@@ -56,8 +56,11 @@ export default function AboutPage() {
     databases: [
       'MongoDB', 'MySQL', 'PostgreSQL' 
     ],
+    ai: [
+       'AI/ML', 'Multi-Agent Orchestration', 'Speech Recognition', 'Computer Vision', 'LLM Agents', 'Prompt Engineering', 'RAG', 'NLP'
+    ],
     core : [
-      'Data Structures & Algorithms', 'OOP', 'System Design', 'Microservices','Agile Methodologies','OOP'
+      'Data Structures & Algorithms', 'OOP', 'System Design', 'Microservices', 'Agile Methodologies'
     ]
 };
 
@@ -87,8 +90,9 @@ export default function AboutPage() {
             className={`text-zinc-500 text-sm space-y-2 font-normal ${aboutAnimations[2].className}`}
           >
             <ul className="list-disc list-inside space-y-1.5">
-              <li><span className="font-bold text-white">8th-semester CSE student at SRM IST, Chennai</span>  <span className="font-bold text-white">with a 9.24/10 CGPA</span></li>
+              <li><span className="font-bold text-white">8th-semester CSE student at SRM IST, Chennai</span>  <span className="font-bold text-white">with a 9.2/10 CGPA</span></li>
               <li> <span className="font-bold text-white">Former SDE Intern at Reliance Jio Platforms Limited, RCP</span></li>
+              <li><span className="font-bold text-white">Former Project Trainee at Unisys, Bangalore</span></li>
               <li><span className="font-bold text-white">Winner of 4 national-level hackathons</span> </li>
             </ul>
           </div>
@@ -116,6 +120,14 @@ export default function AboutPage() {
             <div className="mb-1 flex items-center gap-1 flex-wrap">
               <span className="font-semibold text-zinc-300 mr-2">DevOps and Databases:</span>
               {skills.devops.map(skill => (
+                <Badge key={skill} variant='default' className='bg-zinc-800 text-zinc-300'>
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+            <div className="mb-1 flex items-center gap-1 flex-wrap">
+              <span className="font-semibold text-zinc-300 mr-2">Agentic AI & LLMs:</span>
+              {skills.ai.map(skill => (
                 <Badge key={skill} variant='default' className='bg-zinc-800 text-zinc-300'>
                   {skill}
                 </Badge>

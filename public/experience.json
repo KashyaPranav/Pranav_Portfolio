@@ -3,6 +3,7 @@
     "organization": "Reliance Jio Platforms Limited", 
     "role": "Software Development Engineer Intern",
     "duration": "Dec. 2024 – Jan. 2025",
+    "url": "https://www.jio.com/platforms",
     "location": "Mumbai, India",
     "description": [
       "Worked on the Jio Associate Verification System, a secure platform for field associate validation using Node.js & Express.js.",
@@ -15,6 +16,25 @@
       "Express.js",
       "Flutter",
       "PostgreSQL"
+    ]
+  },
+  {
+    "organization": "Unisys",
+    "role": "Project Trainee",
+    "duration": "Feb. 2025 – Apr. 2025",
+    "url": "https://www.unisys.com/",
+    "location": "Bangalore, India",
+    "description": [
+      "Engineered a multi-factor biometric desktop authentication system combining voice verification, face recognition, fingerprint scanning, eye blink sequence detection, and neck movement recognition for identity and speaker verification in secure and monitored environments.",
+      "Implemented fingerprint sequence matching using pattern recognition and minutiae-based feature extraction, and eye blink sequence matching via temporal frame analysis to detect user-defined blink patterns as a spoof authentication factor.",
+      "Deployed real-time deep learning inference pipelines using CNN and YOLO object detection models, applying advanced computer vision and signal processing techniques for robust authentication across biometric modalities."
+    ],
+    "tech": [
+      "Python",
+      "OpenCV",
+      "PyTorch",
+      "Mediapipe",
+      "YOLO"
     ]
   }
 ]
