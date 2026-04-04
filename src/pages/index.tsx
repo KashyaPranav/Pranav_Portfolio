@@ -184,7 +184,7 @@ export default function AboutPage() {
             <p>
               <FaFileAlt className="inline mr-3 text-xl" />
               <a
-                href="https://drive.google.com/file/d/1eMZ8ohhLLICC5lZyUqAeR8_u2AGn3IGH/view?usp=drivesdk"
+                href="https://drive.google.com/file/d/1Kmk_M_1B_FgnIaYgS6XCSAIR1OL-s5wy/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:underline"
