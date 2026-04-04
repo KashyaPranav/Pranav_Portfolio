@@ -102,8 +102,8 @@ export default function AboutPage() {
             style={aboutAnimations[3].style}
             className={`text-zinc-400 text-base ${aboutAnimations[3].className}`}
           >
-            <div className="mb-1 flex flex-nowrap items-start gap-2">
-              <span className="w-40 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">Languages:</span>
+            <div className="mb-1 flex flex-nowrap items-start gap-1">
+              <span className="w-32 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">Languages:</span>
               <div className="flex flex-1 flex-wrap gap-1">
               {skills.languages.map(skill => (
                 <Badge key={skill} variant='default' className='bg-zinc-800 px-2 py-0.5 text-xs text-zinc-300 whitespace-nowrap'>
@@ -112,8 +112,8 @@ export default function AboutPage() {
               ))}
               </div>
             </div>
-            <div className="mb-1 flex flex-nowrap items-start gap-2">
-              <span className="w-40 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">Frameworks:</span>
+            <div className="mb-1 flex flex-nowrap items-start gap-1">
+              <span className="w-32 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">Frameworks:</span>
               <div className="flex flex-1 flex-wrap gap-1">
               {skills.frameworks.map(skill => (
                 <Badge key={skill} variant='default' className='bg-zinc-800 px-2 py-0.5 text-xs text-zinc-300 whitespace-nowrap'>
@@ -122,8 +122,8 @@ export default function AboutPage() {
               ))}
               </div>
             </div>
-            <div className="mb-1 flex flex-nowrap items-start gap-2">
-              <span className="w-40 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">DevOps:</span>
+            <div className="mb-1 flex flex-nowrap items-start gap-1">
+              <span className="w-32 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">DevOps:</span>
               <div className="flex flex-1 flex-wrap gap-1">
               {skills.devops.map(skill => (
                 <Badge key={skill} variant='default' className='bg-zinc-800 px-2 py-0.5 text-xs text-zinc-300 whitespace-nowrap'>
@@ -132,8 +132,8 @@ export default function AboutPage() {
               ))}
               </div>
             </div>
-            <div className="mb-1 flex flex-nowrap items-start gap-2">
-              <span className="w-40 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">AI Systems:</span>
+            <div className="mb-1 flex flex-nowrap items-start gap-1">
+              <span className="w-32 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">AI Systems:</span>
               <div className="flex flex-1 flex-wrap gap-1">
               {skills.ai.map(skill => (
                 <Badge key={skill} variant='default' className='bg-zinc-800 px-2 py-0.5 text-xs text-zinc-300 whitespace-nowrap'>
@@ -142,8 +142,8 @@ export default function AboutPage() {
               ))}
               </div>
             </div>
-            <div className="flex flex-nowrap items-start gap-2">
-              <span className="w-40 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">Core:</span>
+            <div className="flex flex-nowrap items-start gap-1">
+              <span className="w-32 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">Core:</span>
               <div className="flex flex-1 flex-wrap gap-1">
               {skills.core.map(skill => (
                 <Badge key={skill} variant='default' className='bg-zinc-800 px-2 py-0.5 text-xs text-zinc-300 whitespace-nowrap'>
@@ -206,7 +206,7 @@ export default function AboutPage() {
             <p>
               <FaFileAlt className="inline mr-3 text-xl" />
               <a
-                href="https://drive.google.com/file/d/1uTe5N3T7HxkiDuS713z8ySEgXWdFqglA/view?usp=drivesdk"
+                href="https://drive.google.com/file/d/1oB5OVwjAZ6flgtZLMijl3_93EfXaEkwb/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:underline"
