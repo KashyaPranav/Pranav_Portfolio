@@ -87,45 +87,55 @@ export default function MobileHome() {
       <div className="mb-4 w-full rounded-lg">
         <div className="text-lg font-bold text-zinc-300 mb-2">skills</div>
         <div className="space-y-2 text-xs text-zinc-400">
-          <div className="flex flex-wrap items-center gap-1">
-            <span className="font-semibold text-zinc-300 mr-1">Languages:</span>
+          <div className="flex flex-nowrap items-start gap-2">
+            <span className="w-36 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300">Languages:</span>
+            <div className="flex flex-1 flex-wrap gap-1">
             {skills.languages.map(skill => (
               <Badge key={skill} className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
                 {skill}
               </Badge>
             ))}
+            </div>
           </div>
-          <div className="flex flex-wrap items-center gap-1">
-            <span className="font-semibold text-zinc-300 mr-1">Frameworks:</span>
+          <div className="flex flex-nowrap items-start gap-2">
+            <span className="w-36 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300">Frameworks:</span>
+            <div className="flex flex-1 flex-wrap gap-1">
             {skills.frameworks.map(skill => (
               <Badge key={skill} className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
                 {skill}
               </Badge>
             ))}
+            </div>
           </div>
-          <div className="flex flex-wrap items-center gap-1">
-            <span className="font-semibold text-zinc-300 mr-1">DevOps and Databases:</span>
+          <div className="flex flex-nowrap items-start gap-2">
+            <span className="w-36 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300">DevOps and Databases:</span>
+            <div className="flex flex-1 flex-wrap gap-1">
             {skills.devops.map(skill => (
               <Badge key={skill} className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
                 {skill}
               </Badge>
             ))}
+            </div>
           </div>
-          <div className="flex flex-wrap items-center gap-1">
-            <span className="font-semibold text-zinc-300 mr-1">Agentic AI & LLMs:</span>
+          <div className="flex flex-nowrap items-start gap-2">
+            <span className="w-36 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300">Agentic AI & LLMs:</span>
+            <div className="flex flex-1 flex-wrap gap-1">
             {skills.ai.map(skill => (
               <Badge key={skill} className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
                 {skill}
               </Badge>
             ))}
+            </div>
           </div>
-          <div className="flex flex-wrap items-center gap-1">
-            <span className="font-semibold text-zinc-300 mr-1">Core:</span>
+          <div className="flex flex-nowrap items-start gap-2">
+            <span className="w-36 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300">Core:</span>
+            <div className="flex flex-1 flex-wrap gap-1">
             {skills.core.map(skill => (
               <Badge key={skill} className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
                 {skill}
               </Badge>
             ))}
+            </div>
           </div>
         </div>
       </div>
