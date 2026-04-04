@@ -61,7 +61,7 @@ export default function MobileHome() {
         <div className="text-xl font-bold text-zinc-200">Pranav Kumar Kashyap</div>
         <div className="text-sm text-zinc-400 mb-2 italic">Software Engineer</div>
         <a
-          href="https://drive.google.com/file/d/1uTe5N3T7HxkiDuS713z8ySEgXWdFqglA/view?usp=drivesdk"
+          href="https://drive.google.com/file/d/1oB5OVwjAZ6flgtZLMijl3_93EfXaEkwb/view?usp=drivesdk"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-zinc-900 text-white px-6 py-2 rounded-md text-xs font-semibold hover:bg-zinc-700 transition"
@@ -89,8 +89,8 @@ export default function MobileHome() {
       <div className="mb-3 w-full rounded-lg">
         <div className="text-lg font-bold text-zinc-300 mb-1">skills</div>
         <div className="space-y-1.5 text-xs text-zinc-400">
-          <div className="flex flex-nowrap items-start gap-1.5">
-            <span className="w-28 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">Languages:</span>
+          <div className="flex flex-nowrap items-start gap-1">
+            <span className="w-24 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">Languages:</span>
             <div className="flex flex-1 flex-wrap gap-1">
             {skills.languages.map(skill => (
               <Badge key={skill} className="bg-zinc-800 px-2 py-0.5 text-[11px] leading-none text-zinc-300 hover:bg-zinc-800 whitespace-nowrap">
@@ -99,8 +99,8 @@ export default function MobileHome() {
             ))}
             </div>
           </div>
-          <div className="flex flex-nowrap items-start gap-1.5">
-            <span className="w-28 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">Frameworks:</span>
+          <div className="flex flex-nowrap items-start gap-1">
+            <span className="w-24 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">Frameworks:</span>
             <div className="flex flex-1 flex-wrap gap-1">
             {skills.frameworks.map(skill => (
               <Badge key={skill} className="bg-zinc-800 px-2 py-0.5 text-[11px] leading-none text-zinc-300 hover:bg-zinc-800 whitespace-nowrap">
@@ -109,8 +109,8 @@ export default function MobileHome() {
             ))}
             </div>
           </div>
-          <div className="flex flex-nowrap items-start gap-1.5">
-            <span className="w-28 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">DevOps:</span>
+          <div className="flex flex-nowrap items-start gap-1">
+            <span className="w-24 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">DevOps:</span>
             <div className="flex flex-1 flex-wrap gap-1">
             {skills.devops.map(skill => (
               <Badge key={skill} className="bg-zinc-800 px-2 py-0.5 text-[11px] leading-none text-zinc-300 hover:bg-zinc-800 whitespace-nowrap">
@@ -119,8 +119,8 @@ export default function MobileHome() {
             ))}
             </div>
           </div>
-          <div className="flex flex-nowrap items-start gap-1.5">
-            <span className="w-28 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">AI Systems:</span>
+          <div className="flex flex-nowrap items-start gap-1">
+            <span className="w-24 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">AI Systems:</span>
             <div className="flex flex-1 flex-wrap gap-1">
             {skills.ai.map(skill => (
               <Badge key={skill} className="bg-zinc-800 px-2 py-0.5 text-[11px] leading-none text-zinc-300 hover:bg-zinc-800 whitespace-nowrap">
@@ -129,8 +129,8 @@ export default function MobileHome() {
             ))}
             </div>
           </div>
-          <div className="flex flex-nowrap items-start gap-1.5">
-            <span className="w-28 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">Core:</span>
+          <div className="flex flex-nowrap items-start gap-1">
+            <span className="w-24 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">Core:</span>
             <div className="flex flex-1 flex-wrap gap-1">
             {skills.core.map(skill => (
               <Badge key={skill} className="bg-zinc-800 px-2 py-0.5 text-[11px] leading-none text-zinc-300 hover:bg-zinc-800 whitespace-nowrap">
@@ -236,7 +236,7 @@ export default function MobileHome() {
           </a>
         </div>
         <a
-          href="https://drive.google.com/file/d/1uTe5N3T7HxkiDuS713z8ySEgXWdFqglA/view?usp=drivesdk"
+          href="https://drive.google.com/file/d/1oB5OVwjAZ6flgtZLMijl3_93EfXaEkwb/view?usp=drivesdk"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white px-4 py-2 rounded-md text-xs font-semibold transition border border-zinc-700"
