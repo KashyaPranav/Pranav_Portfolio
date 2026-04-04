@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoIosAt } from 'react-icons/io';
 import { Experience as ExperienceCard } from './experience';
 import { ProjectsTile } from './projects';
+import { Badge } from './ui/badge';
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
 
 interface ExperienceProps {
@@ -34,6 +35,13 @@ export default function MobileHome() {
   const [projects, setProjects] = useState<ProjectsTileProps[]>([]);
   const [achievements, setAchievements] = useState<ProjectsTileProps[]>([]);
   const [certifications, setCertifications] = useState<ProjectsTileProps[]>([]);
+  const skills = {
+    languages: ['C++', 'Python', 'JavaScript', 'C', 'SQL'],
+    frameworks: ['Node.js', 'Express.js', 'REST APIs', 'React.js', 'PyTorch', 'OpenCV', 'Streamlit', 'FastAPI'],
+    devops: ['AWS', 'Oracle Cloud', 'Docker', 'Kubernetes', 'CI/CD', 'Git'],
+    ai: ['AI/ML', 'Multi-Agent Orchestration', 'Speech Recognition', 'Computer Vision', 'LLM Agents', 'Prompt Engineering', 'RAG', 'NLP'],
+    core: ['Data Structures & Algorithms', 'OOP', 'System Design', 'Microservices', 'Agile Methodologies'],
+  };
 
   useEffect(() => {
     fetch('/experience.json').then(res => res.json()).then(setExperience);
@@ -73,6 +81,52 @@ export default function MobileHome() {
           <a href="mailto:pranavkumarkashyap@gmail.com" className="flex items-center gap-2 text-blue-400 text-xs"><IoIosAt /> pranavkumarkashyap@gmail.com</a>
           <a href="https://github.com/KashyaPranav" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-400 text-xs"><FaGithub /> github.com/KashyaPranav</a>
           <a href="https://linkedin.com/in/pranavkkashyap" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-400 text-xs"><FaLinkedin /> linkedin.com/in/pranavkkashyap</a>
+        </div>
+      </div>
+
+      <div className="mb-4 w-full rounded-lg">
+        <div className="text-lg font-bold text-zinc-300 mb-2">skills</div>
+        <div className="space-y-2 text-xs text-zinc-400">
+          <div className="flex flex-wrap items-center gap-1">
+            <span className="font-semibold text-zinc-300 mr-1">Languages:</span>
+            {skills.languages.map(skill => (
+              <Badge key={skill} className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
+                {skill}
+              </Badge>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-1">
+            <span className="font-semibold text-zinc-300 mr-1">Frameworks:</span>
+            {skills.frameworks.map(skill => (
+              <Badge key={skill} className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
+                {skill}
+              </Badge>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-1">
+            <span className="font-semibold text-zinc-300 mr-1">DevOps and Databases:</span>
+            {skills.devops.map(skill => (
+              <Badge key={skill} className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
+                {skill}
+              </Badge>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-1">
+            <span className="font-semibold text-zinc-300 mr-1">Agentic AI & LLMs:</span>
+            {skills.ai.map(skill => (
+              <Badge key={skill} className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
+                {skill}
+              </Badge>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-1">
+            <span className="font-semibold text-zinc-300 mr-1">Core:</span>
+            {skills.core.map(skill => (
+              <Badge key={skill} className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
+                {skill}
+              </Badge>
+            ))}
+          </div>
         </div>
       </div>
 
