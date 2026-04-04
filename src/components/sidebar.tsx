@@ -6,6 +6,7 @@ import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import { IoFileTrayStacked } from "react-icons/io5";
 import { TbBrandLinkedin } from "react-icons/tb";
 import { MdOutlineEmojiEvents } from "react-icons/md";
+import { SiLeetcode } from 'react-icons/si';
 
 interface SidebarProps {
   icon?: JSX.Element;
@@ -95,7 +96,7 @@ export default function Sidebar() {
             <button
               onClick={() =>
                 window.open(
-                  'https://drive.google.com/file/d/1Kmk_M_1B_FgnIaYgS6XCSAIR1OL-s5wy/view?usp=drivesdk'
+                  'https://drive.google.com/file/d/1uTe5N3T7HxkiDuS713z8ySEgXWdFqglA/view?usp=drivesdk'
                 )
               }
               className="relative  cursor-pointer border-2 border-zinc-700 bg-opacity-20 group-hover:border-transparent bg-zinc-900 text-white py-1 px-3 rounded-lg text-sm md:text-base z-10 transition-all duration-300
@@ -154,10 +155,15 @@ export default function Sidebar() {
       </div> */}
         <div className="mt-4">
           <hr className="border-1 border-zinc-700 my-4 mx-4" />
+  import { SiLeetcode } from 'react-icons/si';
           <div className="flex justify-center gap-4">
             <button
               onClick={() => window.open("https://github.com/KashyaPranav", "_blank")} className="cursor-pointer text-gray-500 hover:text-white transition-colors text-2xl">
               <FiGithub />
+            </button>
+            <button
+              onClick={() => window.open("https://leetcode.com/u/pranavkumarkashyap/", "_blank")} className="cursor-pointer text-gray-500 hover:text-white transition-colors text-2xl">
+              <SiLeetcode />
             </button>
             <button
               onClick={() => window.open("https://linkedin.com/in/pranavkkashyap", "_blank")} className="cursor-pointer text-gray-500 hover:text-white transition-colors text-3xl">

@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useCallback, useEffect } from 'react';
 import { FaFileAlt, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoIosAt } from 'react-icons/io';
+import { SiLeetcode } from 'react-icons/si';
 import MobileHome from '../components/MobileHome';
 import { Badge } from '../components/ui/badge';
 
@@ -101,45 +102,55 @@ export default function AboutPage() {
             style={aboutAnimations[3].style}
             className={`text-zinc-400 text-base ${aboutAnimations[3].className}`}
           >
-            <div className="mb-1 flex items-center gap-1 flex-wrap">
-              <span className="font-semibold text-zinc-300 mr-2">Languages:</span>
+            <div className="mb-1 flex flex-nowrap items-start gap-2">
+              <span className="w-40 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">Languages:</span>
+              <div className="flex flex-1 flex-wrap gap-1">
               {skills.languages.map(skill => (
-                <Badge key={skill} variant='default' className='bg-zinc-800 text-zinc-300'>
+                <Badge key={skill} variant='default' className='bg-zinc-800 px-2 py-0.5 text-xs text-zinc-300 whitespace-nowrap'>
                   {skill}
                 </Badge>
               ))}
+              </div>
             </div>
-            <div className="mb-1 flex items-center gap-1 flex-wrap">
-              <span className="font-semibold text-zinc-300 mr-2">Frameworks:</span>
+            <div className="mb-1 flex flex-nowrap items-start gap-2">
+              <span className="w-40 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">Frameworks:</span>
+              <div className="flex flex-1 flex-wrap gap-1">
               {skills.frameworks.map(skill => (
-                <Badge key={skill} variant='default' className='bg-zinc-800 text-zinc-300'>
+                <Badge key={skill} variant='default' className='bg-zinc-800 px-2 py-0.5 text-xs text-zinc-300 whitespace-nowrap'>
                   {skill}
                 </Badge>
               ))}
+              </div>
             </div>
-            <div className="mb-1 flex items-center gap-1 flex-wrap">
-              <span className="font-semibold text-zinc-300 mr-2">DevOps:</span>
+            <div className="mb-1 flex flex-nowrap items-start gap-2">
+              <span className="w-40 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">DevOps:</span>
+              <div className="flex flex-1 flex-wrap gap-1">
               {skills.devops.map(skill => (
-                <Badge key={skill} variant='default' className='bg-zinc-800 text-zinc-300'>
+                <Badge key={skill} variant='default' className='bg-zinc-800 px-2 py-0.5 text-xs text-zinc-300 whitespace-nowrap'>
                   {skill}
                 </Badge>
               ))}
+              </div>
             </div>
-            <div className="mb-1 flex items-center gap-1 flex-wrap">
-              <span className="font-semibold text-zinc-300 mr-2">AI Systems:</span>
+            <div className="mb-1 flex flex-nowrap items-start gap-2">
+              <span className="w-40 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">AI Systems:</span>
+              <div className="flex flex-1 flex-wrap gap-1">
               {skills.ai.map(skill => (
-                <Badge key={skill} variant='default' className='bg-zinc-800 text-zinc-300'>
+                <Badge key={skill} variant='default' className='bg-zinc-800 px-2 py-0.5 text-xs text-zinc-300 whitespace-nowrap'>
                   {skill}
                 </Badge>
               ))}
+              </div>
             </div>
-            <div className="flex items-center gap-1 flex-wrap">
-              <span className="font-semibold text-zinc-300 mr-2">Core:</span>
+            <div className="flex flex-nowrap items-start gap-2">
+              <span className="w-40 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300 leading-tight">Core:</span>
+              <div className="flex flex-1 flex-wrap gap-1">
               {skills.core.map(skill => (
-                <Badge key={skill} variant='default' className='bg-zinc-800 text-zinc-300'>
+                <Badge key={skill} variant='default' className='bg-zinc-800 px-2 py-0.5 text-xs text-zinc-300 whitespace-nowrap'>
                   {skill}
                 </Badge>
               ))}
+              </div>
             </div>
           </div>
 
@@ -168,6 +179,17 @@ export default function AboutPage() {
                 github.com/KashyaPranav
               </a>
             </p>
+            <p>
+              <SiLeetcode className="inline mr-3 text-xl" />
+              <a
+                href="https://leetcode.com/u/pranavkumarkashyap/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline"
+              >
+                leetcode.com/u/pranavkumarkashyap
+              </a>
+            </p>
 
             <p>
               <FaLinkedin className="inline mr-3 text-xl" />
@@ -184,7 +206,7 @@ export default function AboutPage() {
             <p>
               <FaFileAlt className="inline mr-3 text-xl" />
               <a
-                href="https://drive.google.com/file/d/1Kmk_M_1B_FgnIaYgS6XCSAIR1OL-s5wy/view?usp=drivesdk"
+                href="https://drive.google.com/file/d/1uTe5N3T7HxkiDuS713z8ySEgXWdFqglA/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:underline"
