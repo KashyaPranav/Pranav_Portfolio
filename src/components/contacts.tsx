@@ -8,16 +8,17 @@ import {
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import React from 'react';
 import { FaAt, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 
 interface Contact {
   label: string;
   icon: React.ReactNode;
   link: string;
 }
-
 const contacts: Contact[] = [
   { label: 'Email', icon: <FaEnvelope />, link: 'mailto:pranavkumarkashyap@gmail.com' },
   { label: 'GitHub', icon: <FaGithub />, link: 'https://github.com/KashyaPranav' },
+  { label: 'LeetCode', icon: <SiLeetcode />, link: 'https://leetcode.com/u/pranavkumarkashyap/' },
   { label: 'LinkedIn', icon: <FaLinkedin />, link: 'https://linkedin.com/in/pranavkkashyap' },
 ];
 

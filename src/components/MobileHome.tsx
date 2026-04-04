@@ -3,6 +3,7 @@ import type { CSSProperties } from 'react';
 import { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoIosAt } from 'react-icons/io';
+import { SiLeetcode } from 'react-icons/si';
 import { Experience as ExperienceCard } from './experience';
 import { ProjectsTile } from './projects';
 import { Badge } from './ui/badge';
@@ -60,7 +61,7 @@ export default function MobileHome() {
         <div className="text-xl font-bold text-zinc-200">Pranav Kumar Kashyap</div>
         <div className="text-sm text-zinc-400 mb-2 italic">Software Engineer</div>
         <a
-          href="https://drive.google.com/file/d/1Kmk_M_1B_FgnIaYgS6XCSAIR1OL-s5wy/view?usp=drivesdk"
+          href="https://drive.google.com/file/d/1uTe5N3T7HxkiDuS713z8ySEgXWdFqglA/view?usp=drivesdk"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-zinc-900 text-white px-6 py-2 rounded-md text-xs font-semibold hover:bg-zinc-700 transition"
@@ -80,6 +81,7 @@ export default function MobileHome() {
         <div className="flex flex-col gap-1 mt-2">
           <a href="mailto:pranavkumarkashyap@gmail.com" className="flex items-center gap-2 text-blue-400 text-xs"><IoIosAt /> pranavkumarkashyap@gmail.com</a>
           <a href="https://github.com/KashyaPranav" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-400 text-xs"><FaGithub /> github.com/KashyaPranav</a>
+          <a href="https://leetcode.com/u/pranavkumarkashyap/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-400 text-xs"><SiLeetcode /> leetcode.com/u/pranavkumarkashyap</a>
           <a href="https://linkedin.com/in/pranavkkashyap" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-400 text-xs"><FaLinkedin /> linkedin.com/in/pranavkkashyap</a>
         </div>
       </div>
@@ -226,12 +228,15 @@ export default function MobileHome() {
           <a href="https://github.com/KashyaPranav" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
             <FaGithub />
           </a>
+          <a href="https://leetcode.com/u/pranavkumarkashyap/" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+            <SiLeetcode />
+          </a>
           <a href="https://linkedin.com/in/pranavkkashyap" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
             <FaLinkedin />
           </a>
         </div>
         <a
-          href="https://drive.google.com/file/d/1Kmk_M_1B_FgnIaYgS6XCSAIR1OL-s5wy/view?usp=drivesdk"
+          href="https://drive.google.com/file/d/1uTe5N3T7HxkiDuS713z8ySEgXWdFqglA/view?usp=drivesdk"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white px-4 py-2 rounded-md text-xs font-semibold transition border border-zinc-700"
