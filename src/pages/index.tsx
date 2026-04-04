@@ -48,7 +48,7 @@ export default function AboutPage() {
       'C++', 'Python', 'JavaScript', 'C', 'SQL'  
     ],
     frameworks: [
-      'Node.js', 'Express.js','REST APIs', 'React.js', 'PyTorch', 'OpenCV', 'Streamlit', 'FastAPI'
+      'Node.js', 'Express.js','REST APIs', 'React.js', 'PyTorch', 'OpenCV', 'FastAPI'
     ],
     devops: [
       'AWS', 'Oracle Cloud', 'Docker', 'Kubernetes', 'CI/CD', 'Git' 
@@ -118,7 +118,7 @@ export default function AboutPage() {
               ))}
             </div>
             <div className="mb-1 flex items-center gap-1 flex-wrap">
-              <span className="font-semibold text-zinc-300 mr-2">DevOps and Databases:</span>
+              <span className="font-semibold text-zinc-300 mr-2">DevOps:</span>
               {skills.devops.map(skill => (
                 <Badge key={skill} variant='default' className='bg-zinc-800 text-zinc-300'>
                   {skill}
@@ -126,7 +126,7 @@ export default function AboutPage() {
               ))}
             </div>
             <div className="mb-1 flex items-center gap-1 flex-wrap">
-              <span className="font-semibold text-zinc-300 mr-2">Agentic AI & LLMs:</span>
+              <span className="font-semibold text-zinc-300 mr-2">AI Systems:</span>
               {skills.ai.map(skill => (
                 <Badge key={skill} variant='default' className='bg-zinc-800 text-zinc-300'>
                   {skill}

@@ -37,7 +37,7 @@ export default function MobileHome() {
   const [certifications, setCertifications] = useState<ProjectsTileProps[]>([]);
   const skills = {
     languages: ['C++', 'Python', 'JavaScript', 'C', 'SQL'],
-    frameworks: ['Node.js', 'Express.js', 'REST APIs', 'React.js', 'PyTorch', 'OpenCV', 'Streamlit', 'FastAPI'],
+    frameworks: ['Node.js', 'Express.js', 'REST APIs', 'React.js', 'PyTorch', 'OpenCV', 'FastAPI'],
     devops: ['AWS', 'Oracle Cloud', 'Docker', 'Kubernetes', 'CI/CD', 'Git'],
     ai: ['AI/ML', 'Multi-Agent Orchestration', 'Speech Recognition', 'Computer Vision', 'LLM Agents', 'Prompt Engineering', 'RAG', 'NLP'],
     core: ['Data Structures & Algorithms', 'OOP', 'System Design', 'Microservices', 'Agile Methodologies'],
@@ -108,7 +108,7 @@ export default function MobileHome() {
             </div>
           </div>
           <div className="flex flex-nowrap items-start gap-2">
-            <span className="w-36 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300">DevOps and Databases:</span>
+            <span className="w-36 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300">DevOps:</span>
             <div className="flex flex-1 flex-wrap gap-1">
             {skills.devops.map(skill => (
               <Badge key={skill} className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
@@ -118,7 +118,7 @@ export default function MobileHome() {
             </div>
           </div>
           <div className="flex flex-nowrap items-start gap-2">
-            <span className="w-36 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300">Agentic AI & LLMs:</span>
+            <span className="w-36 shrink-0 whitespace-nowrap text-left font-semibold text-zinc-300">AI Systems:</span>
             <div className="flex flex-1 flex-wrap gap-1">
             {skills.ai.map(skill => (
               <Badge key={skill} className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
