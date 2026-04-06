@@ -74,8 +74,9 @@ export default function MobileHome() {
         <div className="text-lg font-bold text-zinc-300 mb-1">about</div>
         <ul className="text-zinc-400 text-xs mb-4 space-y-1 list-disc pl-5">
           <li>8th-semester CSE student at SRM IST, Chennai with a 9.2/10 CGPA</li>
-          <li>Former SDE Intern at Reliance Jio Platforms Limited, RCP</li>
+          <li>Former SDE Intern at Reliance Jio Platforms Limited, RCP, Navi Mumbai</li>
           <li>Former Project Trainee at Unisys, Bangalore</li>
+          <li>Ongoing Research – Geospatial Analytics & Sentinel-2 Multi-Temporal Analysis (Publication Forthcoming)</li>
           <li>Winner of 4 national-level hackathons</li>
         </ul>
         <div className="flex flex-col gap-1 mt-2">
