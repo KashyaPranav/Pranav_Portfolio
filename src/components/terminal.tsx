@@ -36,10 +36,10 @@ export default function TerminalUI() {
       </div>
 
       <div className="p-4 text-white space-y-1 leading-relaxed">
-          <span className="text-green-400">ritwik@craptop-Pro</span>
+          <span className="text-green-400">pranav@MacBook-Air</span>
           <span className="text-zinc-400"> ~ %</span>{' '}
           <span className="text-blue-400">npx</span>{' '}
-          <span className="text-white">ritwik-portfolio</span>
+          <span className="text-white">pranav-portfolio</span>
           <span className="text-blue-400">@latest</span>
           <span className="animate-pulse text-white mx-2 text-md">▍</span>
           <span className="text-gray-500 italic">#Press Enter to launch</span>
