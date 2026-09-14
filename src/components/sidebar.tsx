@@ -84,7 +84,9 @@ export default function Sidebar() {
             style={sidebarAnimations[2].style}
             className={`text-sm pt-1 text-gray-500 italic mb-4 ${sidebarAnimations[2].className}`}
           >
-            Manager at Reliance Industries
+            Manager - AI Transformation
+            <br />
+            Reliance Industries
           </div>
           
           <div
