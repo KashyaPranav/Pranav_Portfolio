@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
       <Head>
-        <title>Pranav Kumar Kashyap - Software Engineer</title>
+        <title>Pranav Kumar Kashyap</title>
         <meta name="description" content="Portfolio of Pranav Kumar Kashyap" />
         <meta name="keywords" content="Portfolio, Backend Development, Developer, Pranav Kumar Kashyap, Full Stack Developer, Next.js, React, JavaScript, TypeScript" />
         <meta name="author" content="Pranav Kumar Kashyap" />

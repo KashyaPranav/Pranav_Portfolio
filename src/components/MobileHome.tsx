@@ -39,7 +39,7 @@ export default function MobileHome() {
   const skills = {
     languages: ['C++', 'Python', 'JavaScript', 'C', 'SQL'],
     frameworks: ['Node.js', 'Express.js', 'REST APIs', 'React.js', 'PyTorch', 'OpenCV', 'FastAPI'],
-    devops: ['AWS', 'Oracle Cloud', 'Docker', 'Kubernetes', 'CI/CD', 'Git'],
+    devops: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'Git'],
     ai: ['AI/ML', 'Multi-Agent Orchestration', 'Speech Recognition', 'Computer Vision', 'LLM Agents', 'Prompt Engineering', 'RAG', 'NLP'],
     core: ['Data Structures & Algorithms', 'OOP', 'System Design', 'Microservices', 'Agile Methodologies'],
   };
@@ -59,7 +59,7 @@ export default function MobileHome() {
       <div className="flex flex-col items-center pt-6 pb-4">
         <Image src="/assets/avatar1.png" alt="avatar1" width={96} height={96} className="w-24 h-24 rounded-full object-cover mb-2" />
         <div className="text-xl font-bold text-zinc-200">Pranav Kumar Kashyap</div>
-        <div className="text-sm text-zinc-400 mb-2 italic">Software Engineer</div>
+        <div className="text-sm text-zinc-400 mb-2 italic">Manager at Reliance Industries</div>
         <a
           href="https://drive.google.com/file/d/1oB5OVwjAZ6flgtZLMijl3_93EfXaEkwb/view?usp=drivesdk"
           target="_blank"
@@ -74,7 +74,7 @@ export default function MobileHome() {
         <div className="text-lg font-bold text-zinc-300 mb-1">about</div>
         <ul className="text-zinc-400 text-xs mb-4 space-y-1 list-disc pl-5">
           <li>Manager at AI Transformation, System Automation, Reliance Industries, Navi Mumbai</li>
-          <li>Graduated CSE student from SRM IST, Chennai with a 9.4/10 CGPA</li>
+          <li>CSE graduate from SRM IST, Chennai, with a 9.4/10 CGPA</li>
           <li>Former Project Trainee at Unisys, Bangalore</li>
           <li>Ongoing Research – Geospatial Analytics & Sentinel-2 Multi-Temporal Analysis (Publication Forthcoming)</li>
           <li>Winner of 4 national-level hackathons</li>
