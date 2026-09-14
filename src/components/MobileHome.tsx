@@ -39,8 +39,8 @@ export default function MobileHome() {
   const skills = {
     languages: ['C++', 'Python', 'JavaScript', 'C', 'SQL'],
     frameworks: ['Node.js', 'Express.js', 'REST APIs', 'React.js', 'PyTorch', 'OpenCV', 'FastAPI'],
-    devops: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'Git'],
-    ai: ['AI/ML', 'Multi-Agent Orchestration', 'Speech Recognition', 'Computer Vision', 'LLM Agents', 'Prompt Engineering', 'RAG', 'NLP'],
+    devops: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'Git', 'Linux', 'eBPF'],
+    ai: ['AI/ML', 'Multi-Agent Orchestration', 'Speech Recognition', 'Computer Vision', 'LLM Agents', 'Prompt Engineering', 'RAG', 'NLP', 'Behavioral Analytics'],
     core: ['Data Structures & Algorithms', 'OOP', 'System Design', 'Microservices', 'Agile Methodologies'],
   };
 
