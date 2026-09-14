@@ -59,7 +59,7 @@ export default function MobileHome() {
       <div className="flex flex-col items-center pt-6 pb-4">
         <Image src="/assets/avatar1.png" alt="avatar1" width={96} height={96} className="w-24 h-24 rounded-full object-cover mb-2" />
         <div className="text-xl font-bold text-zinc-200">Pranav Kumar Kashyap</div>
-        <div className="text-sm text-zinc-400 mb-2 italic">
+        <div className="text-sm text-zinc-400 mb-2 italic text-center">
           Manager - AI Transformation
           <br />
           Reliance Industries
