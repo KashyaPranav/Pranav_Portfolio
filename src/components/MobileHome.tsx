@@ -77,7 +77,7 @@ Reliance Industries Limited
       <div className="mb-4 rounded-lg">
         <div className="text-lg font-bold text-zinc-300 mb-1">about</div>
         <ul className="text-zinc-400 text-xs mb-4 space-y-1 list-disc pl-5">
-          <li>Manager at AI Transformation, Reliance Industries, Navi Mumbai</li>
+          <li>Manager at AI Transformation, Reliance Industries Limited, Navi Mumbai</li>
           <li>CSE graduate from SRM IST, Chennai, with a 9.4/10 CGPA</li>
           <li>Former Project Trainee at Unisys, Bangalore</li>
           <li>Ongoing Research – Geospatial Analytics & Sentinel-2 Multi-Temporal Analysis (Publication Forthcoming)</li>
