@@ -11,6 +11,12 @@ interface ExperienceProps {
 }
 
 const highlightKeywords = [
+  'Trinetra',
+  'Kavach',
+  'Drishti',
+  'Prahari',
+  'eBPF-powered telemetry agent',
+  'closed-loop security architecture',
   'Jio Associate Verification System',
   'Secure Blink',
   'Node.js',

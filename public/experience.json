@@ -1,5 +1,26 @@
 [
   {
+    "organization": "Reliance Industries Limited",
+    "role": "Manager - AI Transformation",
+    "duration": "May. 2026 - Present",
+    "url": "https://www.ril.com/",
+    "location": "Navi Mumbai, India",
+    "description": [
+      "Developed Trinetra, an integrated Smart Jump Server security platform combining Drishti, Kavach, and Prahari for end-to-end security intelligence and automated response.",
+      "Developed Kavach as an eBPF-powered telemetry agent to capture SSH sessions, command execution, process activity, and process lineage from the Jump Server.",
+      "Built Drishti for real-time configuration and change intelligence, identifying and correlating infrastructure changes across monitored systems.",
+      "Implemented Prahari as a behavioral detection and anomaly-response engine for identifying abnormal human and AI-agent activity.",
+      "Integrated telemetry, change intelligence, behavioral analysis, and automated system isolation/containment into a continuous closed-loop security architecture."
+    ],
+    "tech": [
+      "eBPF",
+      "Cyber Security",
+      "Kubernetes",
+      "Linux",
+      "Go"
+    ]
+  },
+  {
     "organization": "Reliance Jio Platforms Limited", 
     "role": "Software Development Engineer Intern",
     "duration": "Dec. 2024 – Jan. 2025",
