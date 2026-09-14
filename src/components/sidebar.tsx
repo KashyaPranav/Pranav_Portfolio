@@ -86,7 +86,7 @@ export default function Sidebar() {
           >
             Manager - AI Transformation
             <br />
-            Reliance Industries
+            Reliance Industries Limited
           </div>
           
           <div
